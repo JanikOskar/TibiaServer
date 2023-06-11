@@ -13,10 +13,9 @@ export const LeftMenu = () => {
     { nameOfTitle: 'News', link: '/' },
     { nameOfTitle: 'Register', link: '/register' },
     { nameOfTitle: 'Download', link: '' },
-    { nameOfTitle: 'Team', link: '' },
+    { nameOfTitle: 'Team', link: '/team' },
     { nameOfTitle: 'Rules', link: '' },
     { nameOfTitle: 'Premium', link: '' },
-    { nameOfTitle: 'Changelog', link: '' },
     { nameOfTitle: 'Shop Offers', link: '' },
   ];
 

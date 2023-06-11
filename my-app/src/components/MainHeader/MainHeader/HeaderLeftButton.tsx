@@ -26,7 +26,6 @@ export const HeaderLeftButton = () => (
       <Hidden id="hidden">
         <HeaderHiddenLists page="https://jbzd.com.pl/" title="Latest News" />
         <HeaderHiddenLists page="/account" title="News Archive" />
-        <HeaderHiddenLists page="" title="Changelog" />
       </Hidden>
     </VisibleList>
     <VisibleList className="visible">
