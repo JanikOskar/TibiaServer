@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { LeftMenuUl } from './LeftMenuUl';
 
@@ -12,40 +11,39 @@ export const LeftMenu = () => {
   const elementsDataMainMenu = [
     { nameOfTitle: 'News', link: '/' },
     { nameOfTitle: 'Register', link: '/register' },
-    { nameOfTitle: 'Download', link: '' },
+    { nameOfTitle: 'Download', link: '/download' },
     { nameOfTitle: 'Team', link: '/team' },
-    { nameOfTitle: 'Rules', link: '' },
-    { nameOfTitle: 'Premium', link: '' },
-    { nameOfTitle: 'Shop Offers', link: '' },
+    { nameOfTitle: 'Rules', link: '/rules' },
+    { nameOfTitle: 'Shop Offers', link: '/shop' },
   ];
 
   const elementsDataGamePlay = [
-    { nameOfTitle: 'Techniques', link: '' },
-    { nameOfTitle: 'Items', link: '' },
-    { nameOfTitle: 'Monsters', link: '' },
-    { nameOfTitle: 'Missions', link: '' },
-    { nameOfTitle: 'Outfits', link: '' },
-    { nameOfTitle: 'Quests', link: '' },
-    { nameOfTitle: 'Events', link: '' },
-    { nameOfTitle: 'Map', link: '' },
+    { nameOfTitle: 'Techniques', link: '/techniques' },
+    { nameOfTitle: 'Items', link: '/items' },
+    { nameOfTitle: 'Monsters', link: '/monsters' },
+    { nameOfTitle: 'Missions', link: '/missions' },
+    { nameOfTitle: 'Outfits', link: '/outfits' },
+    { nameOfTitle: 'Quests', link: '/quests' },
+    { nameOfTitle: 'Events', link: '/events' },
+    { nameOfTitle: 'Map', link: '/map' },
   ];
 
   const elementsDataSystem = [
-    { nameOfTitle: 'Enchants', link: '' },
-    { nameOfTitle: 'Craftings', link: '' },
-    { nameOfTitle: 'Dragon Ball', link: '' },
-    { nameOfTitle: 'Autoloot', link: '' },
-    { nameOfTitle: 'Auction', link: '' },
-    { nameOfTitle: 'Cores', link: '' },
+    { nameOfTitle: 'Enchants', link: '/enchants' },
+    { nameOfTitle: 'Craftings', link: '/craftings' },
+    { nameOfTitle: 'Dragon Ball', link: '/dragonball' },
+    { nameOfTitle: 'Autoloot', link: '/autoloot' },
+    { nameOfTitle: 'Auction', link: '/auction' },
+    { nameOfTitle: 'Cores', link: '/cores' },
   ];
 
   const elementsDataLibrary = [
-    { nameOfTitle: 'Guilds', link: '' },
-    { nameOfTitle: 'Commands', link: '' },
-    { nameOfTitle: 'Who is online', link: '' },
-    { nameOfTitle: 'Last kills', link: '' },
-    { nameOfTitle: 'Ban list', link: '' },
-    { nameOfTitle: 'Highscores', link: '' },
+    { nameOfTitle: 'Guilds', link: '/guilds' },
+    { nameOfTitle: 'Commands', link: '/commands' },
+    { nameOfTitle: 'Who is online', link: '/online' },
+    { nameOfTitle: 'Last kills', link: '/lastkills' },
+    { nameOfTitle: 'Ban list', link: '/banlist' },
+    { nameOfTitle: 'Highscores', link: '/highscore' },
   ];
 
   return (

@@ -6,7 +6,6 @@ const LatestNews = styled.section`
   display: flex;
   justify-content: space-between;
   width:100%
-
 `;
 
 const BoxContent = styled.div`
