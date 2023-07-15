@@ -1,43 +1,43 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { HighscoreTableLevel } from "./HighscoreTable";
 
 const MainBody = styled.div`
-width:100%
-`;
+width:100%;
+padding: 4px;
+ display: flex;
+  justify-content: center;
+  align-items:center;
+  `;
 
 const Table = styled.table`
+border-collapse: collapse;
   border: 1px solid black;
   width:100%
+  border-spacing: 0px;
 `;
 
 const Tr = styled.tr`
-  border: 1px solid black;
-  width:100%;
+  border-bottom: 1px solid black;
+  padding: 4px;
 `;
 
 const Th = styled.th``;
 
 const Td = styled.td`
 border: 1px solid black;
-width:100%
-`;
-
-const Thead = styled.thead`
-  border: 1px solid black;
-  width:100%;
-
+padding: 4px;
 `;
 
 const Tbody = styled.tbody`
-  border: 1px solid black;
-  width:100%;
-
 `;
 
 export const HighscoreBody: FC = () => (
   <MainBody>
-    <h2>Highscores</h2>
     <div>
+      <center>
+    <h2>Highscores</h2>
+    </center>
       <Table>
         <Tbody>
           <Tr>
@@ -89,66 +89,10 @@ export const HighscoreBody: FC = () => (
           </Tr>
         </Tbody>
       </Table>
-      <Table>
-        <Tbody>
-          <Tr>
-            <Td>
-              <center>
-                <h2>Ranking for Level</h2>
-              </center>
-              <table></table>
-              <table>
-                <Tbody>
-                  <Tr>
-                    <Td>
-                      <b>Rank</b>
-                    </Td>
-                    <Td>
-                      <b>Name</b>
-                    </Td>
-                    <Td>
-                      <div>
-                        <b>Level</b>
-                      </div>
-                    </Td>
-                    <Td>
-                      <div>
-                        <b>Points</b>
-                      </div>
-                    </Td>
-                  </Tr>
-                  <Tr></Tr>
-                  <Tr>
-                    <Td>1.</Td>
-                    <Td>
-                      <a>
-                        <span>Shinobu Kocho</span>
-                      </a>
-                    </Td>
-                    <Td>
-                      <center>708</center>
-                    </Td>
-                    <Td>
-                      <center>5,885,648,338</center>
-                    </Td>
-                  </Tr>
-                </Tbody>
-              </table>
-
-              <table>
-                <Tbody>
-                  <Tr>
-                    <Td>
-                      <a>Next Page</a>
-                    </Td>
-                  </Tr>
-                </Tbody>
-              </table>
-            </Td>
-            <Td></Td>
-          </Tr>
-        </Tbody>
-      </Table>{" "}
+      <HighscoreTableLevel />
+      <div>
+        <a>Next page</a>
+      </div>
     </div>
   </MainBody>
 );

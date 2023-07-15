@@ -1,8 +1,7 @@
 import { Formik, Form, Field, FieldProps } from "formik";
 import { useState } from "react";
-import styled from "styled-components";
 import { object, string, ref, boolean, InferType } from "yup";
-import { Input, Space, Checkbox, Button } from "antd";
+import { Input, Space, Checkbox } from "antd";
 
 export const CentralMenuRegister = () => {
   const validationSchema = object({
@@ -41,13 +40,7 @@ export const CentralMenuRegister = () => {
       <div>Create Account</div>
       <>
         <Formik
-          initialValues={{
-            login: "",
-            email: "",
-            password: "",
-            repeatPassword: "",
-            termsAccepted: false,
-          }}
+          initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={(values, actions) => {
             console.log("val", values);
