@@ -5,7 +5,8 @@ const LeftMainMenu = styled.section`
   padding: 10px;
   background-color: aqua;
   display: block;
-`;
+  left:0px
+  `;
 
 export const LeftMenu = () => {
   const elementsDataMainMenu = [

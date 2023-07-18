@@ -6,6 +6,7 @@ background-color: crimson;
 display: block;
 text-align: center;
 padding: 10px;
+right:0px;
 `;
 
 export const RightMenu = () => {

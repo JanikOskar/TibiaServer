@@ -6,7 +6,6 @@ import { BanListBody } from "./BanListBody";
 
 const Main = styled.div`
   display: flex;
-  justify-content: space-between;
 `;
 
 export const BanList = () => (
