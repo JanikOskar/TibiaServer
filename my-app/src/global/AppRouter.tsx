@@ -17,7 +17,7 @@ export const AppRouter: FunctionComponent = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/team" element={<Team />} />
           <Route path="/download" element={<Download />} />
-          <Route path="/highscore" element={<Highscore />} />
+          <Route path="/highscore/:highscoreName" element={<Highscore />} />
           <Route path="/rules" element={<Rules />} />
           <Route path="/shop" element={<ShopOffer />} />
         </Routes>

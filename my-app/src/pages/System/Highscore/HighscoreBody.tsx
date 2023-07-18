@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { HighscoreTableLevel } from "./HighscoreTable";
 
 const MainBody = styled.div`
-width:100%;
-padding: 4px;
- display: flex;
+  width: 100%;
+  padding: 4px;
+  display: flex;
   justify-content: center;
-  align-items:center;
-  `;
+  align-items: center;
+`;
 
 const Table = styled.table`
 border-collapse: collapse;
@@ -25,65 +25,64 @@ const Tr = styled.tr`
 const Th = styled.th``;
 
 const Td = styled.td`
-border: 1px solid black;
-padding: 4px;
+  border: 1px solid black;
+  padding: 4px;
 `;
 
-const Tbody = styled.tbody`
-`;
+const Tbody = styled.tbody``;
 
 export const HighscoreBody: FC = () => (
   <MainBody>
     <div>
       <center>
-    <h2>Highscores</h2>
-    </center>
+        <h2>Highscores</h2>
+      </center>
       <Table>
         <Tbody>
           <Tr>
             <Td>
               <div>
-                <a>Level</a>
+                <a href="/highscore/level">Level</a>
               </div>
             </Td>
             <Td>
               <div>
-                <a>Ki Level</a>
+              <a href="/highscore/kiLevel">Ki Level</a>
               </div>
             </Td>
             <Td>
               <div>
-                <a>Speed</a>
+                <a href="/highscore/speed">Speed</a>
               </div>
             </Td>
             <Td>
               <div>
-                <a>Atk. Speed</a>
+                <a href="/highscore/atkSpeed">Atk. Speed</a>
               </div>
             </Td>
             <Td>
               <div>
-                <a>Critical</a>
+                <a href="/highscore/critical">Critical</a>
               </div>
             </Td>
             <Td>
               <div>
-                <a>Strength</a>
+                <a href="/highscore/strength">Strength</a>
               </div>
             </Td>
             <Td>
               <div>
-                <a>Ki Blast</a>
+                <a href="/highscore/kiBlast">Ki Blast</a>
               </div>
             </Td>
             <Td>
               <div>
-                <a>Defense</a>
+                <a href="/highscore/defense">Defense</a>
               </div>
             </Td>
             <Td>
               <div>
-                <a>Energy</a>
+                <a href="/highscore/energy">Energy</a>
               </div>
             </Td>
           </Tr>

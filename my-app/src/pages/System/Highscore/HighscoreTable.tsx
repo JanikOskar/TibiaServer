@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FC, useEffect, useState } from "react";
+import { useParams } from "react-router";
 
 const Tr = styled.tr`
   border-bottom: 1px solid black;
@@ -88,6 +89,8 @@ const professions = [
 ];
 
 export const HighscoreTableLevel: FC = () => {
+  const { highscoreName } = useParams();
+
   const [users, setUsers] = useState<
     { name: string; profession: string; level: number }[]
   >([]);
@@ -103,7 +106,7 @@ export const HighscoreTableLevel: FC = () => {
   };
 
   const getRandomLevel = () => {
-    return Math.floor(Math.random() * 999) + 1;
+    return Math.floor(Math.random() * 99999) + 1;
   };
 
   const generateUsers = () => {
@@ -128,11 +131,33 @@ export const HighscoreTableLevel: FC = () => {
     handleGenerateUsers();
   }, []);
 
+  const changeHighscoreName = (name:any) => {
+
+    switch (name) {
+      case "kiLevel":
+        return <h2>Ranking for Ki Level</h2>;
+      case "speed":
+        return <h2>Ranking for Speed</h2>;
+      case "atkSpeed":
+        return <h2>Ranking for Attack Speed</h2>;
+      case "critical":
+        return <h2>Ranking for Critical</h2>;
+      case "strength":
+        return <h2>Ranking for Strength</h2>;
+      case "kiBlast":
+        return <h2>Ranking for Ki Blast</h2>;
+      case "defense":
+        return  <h2>Ranking for Defense</h2>;
+      case "energy":
+        return <h2>Ranking for Energy</h2>;
+      default:
+        return <h2>Ranking for Level</h2>;
+    }
+  };
+
   return (
     <>
-      <center>
-        <h2>Ranking for Level</h2>
-      </center>
+      <center>{changeHighscoreName(highscoreName)}</center>
       <Table>
         <Thead>
           <Tr>

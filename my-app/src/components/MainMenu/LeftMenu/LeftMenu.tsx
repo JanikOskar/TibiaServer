@@ -43,7 +43,7 @@ export const LeftMenu = () => {
     { nameOfTitle: 'Who is online', link: '/online' },
     { nameOfTitle: 'Last kills', link: '/lastkills' },
     { nameOfTitle: 'Ban list', link: '/banlist' },
-    { nameOfTitle: 'Highscores', link: '/highscore' },
+    { nameOfTitle: 'Highscores', link: '/highscore/level' },
   ];
 
   return (
