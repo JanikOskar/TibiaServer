@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { HeaderLeftButton } from '../../../components/MainHeader/MainHeader/HeaderLeftButton';
-import { HeaderRightButton } from '../../../components/MainHeader/MainHeader/HeaderRightButton';
+import { HeaderLeftButton } from './HeaderLeftButton';
+import { HeaderRightButton } from './HeaderRightButton';
 
 const Header = styled.header``;
 

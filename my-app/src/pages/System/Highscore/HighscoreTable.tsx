@@ -131,8 +131,7 @@ export const HighscoreTableLevel: FC = () => {
     handleGenerateUsers();
   }, []);
 
-  const changeHighscoreName = (name:any) => {
-
+  const changeHighscoreName = (name: any) => {
     switch (name) {
       case "kiLevel":
         return <h2>Ranking for Ki Level</h2>;
@@ -147,7 +146,7 @@ export const HighscoreTableLevel: FC = () => {
       case "kiBlast":
         return <h2>Ranking for Ki Blast</h2>;
       case "defense":
-        return  <h2>Ranking for Defense</h2>;
+        return <h2>Ranking for Defense</h2>;
       case "energy":
         return <h2>Ranking for Energy</h2>;
       default:

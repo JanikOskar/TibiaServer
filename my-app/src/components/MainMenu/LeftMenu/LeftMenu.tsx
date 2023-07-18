@@ -33,7 +33,6 @@ export const LeftMenu = () => {
     { nameOfTitle: 'Craftings', link: '/craftings' },
     { nameOfTitle: 'Dragon Ball', link: '/dragonball' },
     { nameOfTitle: 'Autoloot', link: '/autoloot' },
-    { nameOfTitle: 'Auction', link: '/auction' },
     { nameOfTitle: 'Cores', link: '/cores' },
   ];
 

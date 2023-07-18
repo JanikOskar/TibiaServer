@@ -3,7 +3,7 @@ import { useState } from "react";
 import { object, string, ref, boolean, InferType } from "yup";
 import { Input, Space, Checkbox } from "antd";
 
-export const CentralMenuRegister = () => {
+export const RegisterBody = () => {
   const validationSchema = object({
     login: string()
       .min(2, "Too Short!")

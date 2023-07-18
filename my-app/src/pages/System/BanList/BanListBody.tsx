@@ -1,0 +1,95 @@
+import { FC } from "react";
+import styled from "styled-components";
+
+const MainBody = styled.div`
+  width: 100%;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Table = styled.table`
+border-collapse: collapse;
+  border: 1px solid black;
+  width:100%
+  border-spacing: 0px;
+`;
+
+const Tr = styled.tr`
+  border-bottom: 1px solid black;
+  padding: 4px;
+`;
+
+const Th = styled.th``;
+
+const Td = styled.td`
+  border: 1px solid black;
+  padding: 4px;
+`;
+
+const Tbody = styled.tbody``;
+
+export const BanListBody: FC = () => (
+  <MainBody>
+    <div>
+      <center>
+        <h2>Ban List</h2>
+      </center>
+      <Table>
+        <Tbody>
+          <Tr>
+            <Td>
+              <div>
+                <a href="/highscore/level">Level</a>
+              </div>
+            </Td>
+            <Td>
+              <div>
+              <a href="/highscore/kiLevel">Ki Level</a>
+              </div>
+            </Td>
+            <Td>
+              <div>
+                <a href="/highscore/speed">Speed</a>
+              </div>
+            </Td>
+            <Td>
+              <div>
+                <a href="/highscore/atkSpeed">Atk. Speed</a>
+              </div>
+            </Td>
+            <Td>
+              <div>
+                <a href="/highscore/critical">Critical</a>
+              </div>
+            </Td>
+            <Td>
+              <div>
+                <a href="/highscore/strength">Strength</a>
+              </div>
+            </Td>
+            <Td>
+              <div>
+                <a href="/highscore/kiBlast">Ki Blast</a>
+              </div>
+            </Td>
+            <Td>
+              <div>
+                <a href="/highscore/defense">Defense</a>
+              </div>
+            </Td>
+            <Td>
+              <div>
+                <a href="/highscore/energy">Energy</a>
+              </div>
+            </Td>
+          </Tr>
+        </Tbody>
+      </Table>
+      <div>
+        <a>Next page</a>
+      </div>
+    </div>
+  </MainBody>
+);
