@@ -3,17 +3,17 @@ import styled from "styled-components";
 import { HighscoreTableLevel } from "./HighscoreTable";
 
 const MainBody = styled.div`
-  width: 100%;
+  width: 80%;
   padding: 4px;
+  flex:1;
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 
 const Table = styled.table`
-border-collapse: collapse;
-  border: 1px solid black;
-  width:100%
+  display:flex;
+  justify-content:center;
+  border-collapse: collapse;
   border-spacing: 0px;
 `;
 
@@ -33,7 +33,7 @@ const Tbody = styled.tbody``;
 
 export const HighscoreBody: FC = () => (
   <MainBody>
-    <div>
+    <div style={{width:'80%'}}>
       <center>
         <h2>Highscores</h2>
       </center>

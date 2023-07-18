@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { NewsMenuHeadline } from './NewsMenuHeadeline';
 
 const LatestNews = styled.section`
-  display: flex;
-  justify-content: space-between;
-  width:100%
+  width:80%
 `;
 
 const BoxContent = styled.div`

@@ -30,7 +30,6 @@ const RankColumn = styled.td`
 border-left: 1px solid black;
 border-right: 1px solid black
 border-bottom: 1px solid black
-width:5%;
 `;
 
 const NameColumn = styled.td`
@@ -60,6 +59,7 @@ const MainBody = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex:1;
 `;
 
 const NameOfRow = styled.span`
