@@ -6,8 +6,10 @@ import { RightMenu } from "../../../components/MainMenu/RightMenu/RightMenu";
 
 
 const Main = styled.div`
-  display: flex;
-  justify-content: space-between;
+height:100vh;
+display:flex;
+flex:1;
+justify-content:center;
 `;
 
 

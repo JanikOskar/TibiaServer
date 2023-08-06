@@ -6,7 +6,6 @@ import { MainHeader } from '../../../components/MainHeader/MainHeader/MainHeader
 
 const Main = styled.div`
   display: flex;
-  justify-content: space-between;
 `;
 
 export const Home = () => 

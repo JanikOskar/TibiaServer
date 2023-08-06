@@ -1,18 +1,18 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { HighscoreTableLevel } from "./HighscoreTable";
+import { SubTitle } from "../../../components/SubTitle";
 
 const MainBody = styled.div`
-  width: 80%;
   padding: 4px;
-  flex:1;
+  flex: 1;
   display: flex;
   justify-content: center;
 `;
 
 const Table = styled.table`
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   border-collapse: collapse;
   border-spacing: 0px;
 `;
@@ -33,10 +33,8 @@ const Tbody = styled.tbody``;
 
 export const HighscoreBody: FC = () => (
   <MainBody>
-    <div style={{width:'80%'}}>
-      <center>
-        <h2>Highscores</h2>
-      </center>
+    <div style={{ width: "80%" }}>
+    <SubTitle title='Highscore' />
       <Table>
         <Tbody>
           <Tr>
@@ -47,7 +45,7 @@ export const HighscoreBody: FC = () => (
             </Td>
             <Td>
               <div>
-              <a href="/highscore/kiLevel">Ki Level</a>
+                <a href="/highscore/kiLevel">Ki Level</a>
               </div>
             </Td>
             <Td>

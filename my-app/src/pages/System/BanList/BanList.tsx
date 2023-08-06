@@ -6,6 +6,8 @@ import { BanListBody } from "./BanListBody";
 
 const Main = styled.div`
   display: flex;
+  flex: 1;
+  justify-content: center;
 `;
 
 export const BanList = () => (

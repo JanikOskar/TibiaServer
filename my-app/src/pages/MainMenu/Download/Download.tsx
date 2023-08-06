@@ -3,6 +3,7 @@ import { LeftMenu } from "../../../components/MainMenu/LeftMenu/LeftMenu";
 import { RightMenu } from "../../../components/MainMenu/RightMenu/RightMenu";
 import { MainHeader } from "../../../components/MainHeader/MainHeader/MainHeader";
 import { DownloadBody } from './DownloadBody';
+import { SubTitle } from "../../../components/SubTitle";
 
 const Main = styled.div`
   display: flex;
@@ -11,6 +12,7 @@ const Main = styled.div`
 
 export const Download = () => (
   <>
+    <SubTitle title='Download' />
     <MainHeader />
     <Main>
       <LeftMenu />

@@ -2,23 +2,21 @@ import styled from "styled-components";
 import { FC, useEffect, useState } from "react";
 import { useParams } from "react-router";
 
+const Table = styled.table`
+  border-collapse: collapse;
+  width:100%;
+  border-spacing: 0px;
+  border: 1px solid black;
+`;
+
 const Tr = styled.tr`
-  border-bottom: 1px solid black;
   padding: 4px;
 `;
 
 const Td = styled.td`
 border-left: 1px solid black;
-border-right: 1px solid black
-border-bottom: 1px solid black
+border-bottom: 1px solid black;
 padding: 4px;
-`;
-
-const Table = styled.table`
-border-collapse: collapse;
-  border: 1px solid black;
-  width:100%
-  border-spacing: 0px;
 `;
 
 const Thead = styled.thead`
@@ -27,31 +25,26 @@ const Thead = styled.thead`
 `;
 
 const RankColumn = styled.td`
-border-left: 1px solid black;
-border-right: 1px solid black
-border-bottom: 1px solid black
-width:5%;
+  border-bottom: 1px solid black;
 `;
 
 const NameColumn = styled.td`
-border-left: 1px solid black;
-border-right: 1px solid black
-border-bottom: 1px solid black
-padding: 4px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 4px;
 `;
+
 const ProfessionColumn = styled.td`
-border-left: 1px solid black;
-border-right: 1px solid black
-border-bottom: 1px solid black
-padding: 4px;
-width:10%;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 4px;
 `;
+
 const LevelColumn = styled.td`
-border-left: 1px solid black;
-border-right: 1px solid black
-border-bottom: 1px solid black
-padding: 4px;
-width:10%;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 4px;
+  width:10%;
 `;
 
 const NameOfRow = styled.span`
@@ -111,7 +104,7 @@ export const HighscoreTableLevel: FC = () => {
 
   const generateUsers = () => {
     const generatedUsers = [];
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 40; i++) {
       const user = {
         name: getRandomName(),
         profession: getRandomProfession(),
@@ -181,6 +174,7 @@ export const HighscoreTableLevel: FC = () => {
               </NameOfRow>
             </LevelColumn>
           </Tr>
+        </Thead>
           {users.map((element, index) => (
             <Tr key={index}>
               <Td>
@@ -204,7 +198,6 @@ export const HighscoreTableLevel: FC = () => {
               </Td>
             </Tr>
           ))}
-        </Thead>
       </Table>
     </>
   );

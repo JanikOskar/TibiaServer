@@ -2,6 +2,14 @@ import { Formik, Form, Field, FieldProps } from "formik";
 import { useState } from "react";
 import { object, string, ref, boolean, InferType } from "yup";
 import { Input, Space, Checkbox } from "antd";
+import { SubTitle } from "../../../components/SubTitle";
+import { styled } from "styled-components";
+
+const FormStyle = styled(Form)`
+display:flex;
+align-items:center;
+flex-direction:column;
+`;
 
 export const RegisterBody = () => {
   const validationSchema = object({
@@ -10,13 +18,13 @@ export const RegisterBody = () => {
       .max(50, "Too Long!")
       .required("Required"),
     email: string().email("Invalid email").required("Required"),
-    password: string().required(`PASSWORD_IS_REQUIRED`),
+    password: string().required(`PASSWORD IS REQUIRED`),
     repeatPassword: string()
-      .oneOf([ref("password")], `PASSWORD_DONT_MATCH`)
-      .required(`"PASSWORD_CONFIRM_IS_REQUIRED`),
+      .oneOf([ref("password")], `PASSWORD DONT MATCH`)
+      .required(`"PASSWORD CONFIRM IS REQUIRED`),
     termsAccepted: boolean()
-      .oneOf([true], `THE_TERMS_AND_CONDITION_MUST_BE_ACCEPTED`)
-      .required(`THE_TERMS_AND_CONDITION_MUST_BE_ACCEPTED`),
+      .oneOf([true], `THE TERMS AND CONDITION MUST BE ACCEPTED`)
+      .required(`THE TERMS AND CONDITION MUST BE ACCEPTED`),
   });
 
   type FormValues = InferType<typeof validationSchema>;
@@ -36,9 +44,9 @@ export const RegisterBody = () => {
   const [termsAccepted, setTermsAccepted] = useState(false);
 
   return (
-    <div>
-      <div>Create Account</div>
-      <>
+    <div style={{width: '100%'}}>
+      <SubTitle title={`Create Account`} />
+      <div style={{width: '100%'}}>
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -48,9 +56,9 @@ export const RegisterBody = () => {
           }}
         >
           {({ errors, touched }) => (
-            <Form>
-              <Space direction="vertical">
-                <Field name="email">
+            <FormStyle>
+              <Space direction="vertical" style={{width: '80%'}}>
+                <Field name="email" >
                   {(fieldProps: FieldProps<string>) => (
                     <Input
                       {...fieldProps.field}
@@ -147,7 +155,7 @@ export const RegisterBody = () => {
                         setTermsAccepted(e.target.checked);
                       }}
                     >
-                      Checkbox
+                      I have read the <a href="/rules">Terms of Service</a> and <a href="/rules">Privacy Policy</a> and I do accept them
                     </Checkbox>
                   )}
                 </Field>
@@ -155,11 +163,11 @@ export const RegisterBody = () => {
                   <div>{errors.termsAccepted}</div>
                 ) : null}
               </Space>
-              <button type="submit">Wyślij</button>
-            </Form>
+              <button style={{width: '10%'}} type="submit">Wyślij</button>
+            </FormStyle>
           )}
         </Formik>
-      </>
+      </div>
     </div>
   );
 };
