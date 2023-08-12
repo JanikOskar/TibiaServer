@@ -9,7 +9,8 @@
     "allowJs": true,
     "baseUrl": "./src",
     "paths": {
-      "assets/*": ["assets/*"]
+      "assets/*": ["assets/*"],
+      "techniques/*": ["techniques/*"]
     },
     "skipLibCheck": true,
     "esModuleInterop": true,
