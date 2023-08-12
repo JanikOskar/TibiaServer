@@ -7,6 +7,10 @@
       "esnext"
     ],
     "allowJs": true,
+    "baseUrl": "./src",
+    "paths": {
+      "assets/*": ["assets/*"]
+    },
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -18,7 +22,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "jsxFactory": "React.createElement",
+    "typeRoots": ["node_modules/@types"]
   },
   "include": [
     "src"

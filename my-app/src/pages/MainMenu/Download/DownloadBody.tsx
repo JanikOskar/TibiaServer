@@ -32,7 +32,6 @@ export const DownloadBody = () => {
   return (
     <Main>
     <SubTitle title='Download' />
-      
        <ButtonStyled className="regular" type="primary" shape="round" icon={<WindowsOutlined />} size={"large"}>
             Regular Client
           </ButtonStyled>
