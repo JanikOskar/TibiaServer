@@ -8,6 +8,7 @@ import { Rules } from "../pages/MainMenu/Rules/Rules";
 import { ShopOffer } from "../pages/MainMenu/ShopOffers/ShopOffer";
 import { Highscore } from "../pages/System/Highscore/Highscore";
 import { BanList } from "../pages/System/BanList/BanList";
+import { Items } from "pages/GamePlay/Items/Items";
 import { Techniques } from "pages/GamePlay/Techniques/Techniques";
 
 export const AppRouter: FunctionComponent = () => {
@@ -24,6 +25,7 @@ export const AppRouter: FunctionComponent = () => {
           <Route path="/shop" element={<ShopOffer />} />
           <Route path="/banlist" element={<BanList />} />
           <Route path="/techniques" element={<Techniques />} />
+          <Route path="/items" element={<Items />} />
 
         </Routes>
       </BrowserRouter>

@@ -1,21 +1,21 @@
 import styled from "styled-components";
 import { SubTitle } from "../../../components/SubTitle";
-import { ReactComponent as Gold } from "assets/Gold.svg";
-import { ReactComponent as Bol } from "assets/Bol.svg";
-import { ReactComponent as FR } from "assets/FR.svg";
-import { ReactComponent as Senzu } from "assets/Senzu.svg";
-import { ReactComponent as RedSenzu } from "assets/RedSenzu.svg";
-import { ReactComponent as BoostExp } from "assets/BoostExp.svg";
-import { ReactComponent as BoostHP } from "assets/BoostHP.svg";
-import { ReactComponent as BoostMP } from "assets/BoostMP.svg";
-import { ReactComponent as DropBoost } from "assets/DropBoost.svg";
-import { ReactComponent as DBBag } from "assets/DBBag.svg";
-import { ReactComponent as FirstOut } from "assets/FirstOut.svg";
-import { ReactComponent as PP1K } from "assets/PP1K.svg";
-import { ReactComponent as PP3K } from "assets/PP3K.svg";
+import { ReactComponent as Gold } from "assets/shopItems/Gold.svg";
+import { ReactComponent as Bol } from "assets/shopItems/Bol.svg";
+import { ReactComponent as FR } from "assets/shopItems/FR.svg";
+import { ReactComponent as Senzu } from "assets/shopItems/Senzu.svg";
+import { ReactComponent as RedSenzu } from "assets/shopItems/RedSenzu.svg";
+import { ReactComponent as BoostExp } from "assets/shopSpecial/BoostExp.svg";
+import { ReactComponent as BoostHP } from "assets/shopSpecial/BoostHP.svg";
+import { ReactComponent as BoostMP } from "assets/shopSpecial/BoostMP.svg";
+import { ReactComponent as DropBoost } from "assets/shopSpecial/DropBoost.svg";
+import { ReactComponent as DBBag } from "assets/shopItems/DBBag.svg";
+import { ReactComponent as FirstOut } from "assets/shopOutfits/FirstOut.svg";
+import { ReactComponent as PP1K } from "assets/shopSpecial/PP1K.svg";
+import { ReactComponent as PP3K } from "assets/shopSpecial/PP3K.svg";
 import { ReactComponent as Prem10 } from "assets/Prem10.svg";
 import { ReactComponent as Prem30 } from "assets/Prem30.svg";
-import { ReactComponent as SecOut } from "assets/SecOut.svg";
+import { ReactComponent as SecOut } from "assets/shopOutfits/SecOut.svg";
 
 
 import { ShopOfferElement } from "components/ShopOfferElement";

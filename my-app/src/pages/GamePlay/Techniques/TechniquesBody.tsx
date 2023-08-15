@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { SubTitle } from "../../../components/SubTitle";
-
 import { ReactComponent as Vegeta } from "assets/characters/vegeta.svg";
 import { ReactComponent as Buu } from "assets/characters/buu.svg";
 import { ReactComponent as Gohan } from "assets/characters/gohan.svg";
