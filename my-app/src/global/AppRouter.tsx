@@ -11,6 +11,7 @@ import { BanList } from "../pages/System/BanList/BanList";
 import { Items } from "pages/GamePlay/Items/Items";
 import { Techniques } from "pages/GamePlay/Techniques/Techniques";
 import { Monsters } from "pages/GamePlay/Monsters/Monsters";
+import { Missions } from "pages/GamePlay/Missions/Missions";
 
 export const AppRouter: FunctionComponent = () => {
   return (
@@ -28,6 +29,9 @@ export const AppRouter: FunctionComponent = () => {
           <Route path="/techniques" element={<Techniques />} />
           <Route path="/items" element={<Items />} />
           <Route path="/monsters" element={<Monsters />} />
+          <Route path="/missions" element={<Missions />} />
+          <Route path="/missions/:missionName" element={<Missions />} />
+
         </Routes>
       </BrowserRouter>
     </>
