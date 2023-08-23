@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FC, useEffect, useState } from "react";
 import { SubTitle } from "../../../components/SubTitle";
+import React from "react";
 
 const Table = styled.table`
   border-collapse: collapse;
@@ -139,7 +140,6 @@ export const BanListBody: FC = () => {
   return (
     <div style={{width:'100%'}}>
               <SubTitle title='Ban List' />
-
           <Table>
             <Thead>
               <Tr>

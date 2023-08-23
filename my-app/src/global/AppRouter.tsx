@@ -6,12 +6,16 @@ import { Team } from "../pages/MainMenu/Team/Team";
 import { Download } from "../pages/MainMenu/Download/Download";
 import { Rules } from "../pages/MainMenu/Rules/Rules";
 import { ShopOffer } from "../pages/MainMenu/ShopOffers/ShopOffer";
-import { Highscore } from "../pages/System/Highscore/Highscore";
-import { BanList } from "../pages/System/BanList/BanList";
+import { BanList } from "../pages/Library/BanList/BanList";
 import { Items } from "pages/GamePlay/Items/Items";
 import { Techniques } from "pages/GamePlay/Techniques/Techniques";
 import { Monsters } from "pages/GamePlay/Monsters/Monsters";
 import { Missions } from "pages/GamePlay/Missions/Missions";
+import { Highscore } from "pages/Library/Highscore/Highscore";
+import { Enchants } from "pages/System/Enchants/Enchants";
+import { DragonBalls } from "pages/System/DragonBalls/DragonBalls";
+import { AutoLoot } from "pages/System/AutoLoot/AutoLoot";
+
 
 export const AppRouter: FunctionComponent = () => {
   return (
@@ -31,6 +35,11 @@ export const AppRouter: FunctionComponent = () => {
           <Route path="/monsters" element={<Monsters />} />
           <Route path="/missions" element={<Missions />} />
           <Route path="/missions/:missionName" element={<Missions />} />
+          <Route path="/enchants" element={<Enchants />} />
+          <Route path="/dragonball" element={<DragonBalls />} />
+          <Route path="/autoloot" element={<AutoLoot />} />
+
+
 
         </Routes>
       </BrowserRouter>

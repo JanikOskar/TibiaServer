@@ -197,7 +197,6 @@ export const DBSMissions = () => {
         <Table dataSource={TournamentSagaDataSource} columns={columns} pagination={false} caption={'Tournament Saga'}/>
         <Table dataSource={BlackGokuSagaDataSource} columns={columns} pagination={false} caption={'Black Goku Saga'}/>
         <Table dataSource={SurvivalSagaDataSource} columns={columns} pagination={false} caption={'Survival Saga'}/>
-
     </MainMenu>
   );
 };
