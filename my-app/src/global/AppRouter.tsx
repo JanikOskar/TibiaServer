@@ -15,6 +15,7 @@ import { Highscore } from "pages/Library/Highscore/Highscore";
 import { Enchants } from "pages/System/Enchants/Enchants";
 import { DragonBalls } from "pages/System/DragonBalls/DragonBalls";
 import { AutoLoot } from "pages/System/AutoLoot/AutoLoot";
+import { Login } from "components/Login/Login";
 
 
 export const AppRouter: FunctionComponent = () => {
@@ -38,6 +39,7 @@ export const AppRouter: FunctionComponent = () => {
           <Route path="/enchants" element={<Enchants />} />
           <Route path="/dragonball" element={<DragonBalls />} />
           <Route path="/autoloot" element={<AutoLoot />} />
+          <Route path="/login" element={<Login />} />
 
 
 

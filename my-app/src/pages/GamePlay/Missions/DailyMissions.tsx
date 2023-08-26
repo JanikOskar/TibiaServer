@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { SubTitle } from "../../../components/SubTitle";
 import { Table } from "antd";
 import { ReactComponent as Daily } from "assets/missions/Daily1.svg";
 

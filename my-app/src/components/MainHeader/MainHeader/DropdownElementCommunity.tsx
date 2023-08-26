@@ -1,5 +1,11 @@
 import { Dropdown, MenuProps } from 'antd';
 import React from 'react';
+import styled from 'styled-components';
+
+const Title = styled.h3`
+  text-decoration:none ;
+  color:#DFCD00;
+`;
 
 export const DropdownElementCommunity  = () => {
   const items: MenuProps['items'] = [
@@ -20,7 +26,7 @@ export const DropdownElementCommunity  = () => {
   ];
   return (
     <Dropdown menu={{ items }} placement="bottom">
-        <div>Community</div>
+        <Title>Community</Title>
       </Dropdown>
 )
   };

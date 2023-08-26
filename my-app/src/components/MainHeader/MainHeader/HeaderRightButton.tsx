@@ -1,25 +1,27 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const MainLists = styled.ul`
   display: flex;
   padding: 0;
 `;
 
-
-const Hidden = styled.ul`
-  display: none;
+const Link = styled.a`
+  margin-right: 20px;
+  text-decoration: none;
+  text-decoration:none ;
+  color:#DFCD00;
 `;
 
 export const HeaderRightButton = () => (
   <MainLists>
-    <div>
-      <a href="/download">Download</a>
-    </div>
-    <div>
-      <a href="/login">Login</a>
-    </div>
-    <div>
-      <a href="/register">Register</a>
-    </div>
+    <Link href="/download">
+      <h3>Download</h3>
+    </Link>
+    <Link href="/login">
+      <h3>Login</h3>
+    </Link>
+    <Link href="/register">
+      <h3>Register</h3>
+    </Link>
   </MainLists>
 );
