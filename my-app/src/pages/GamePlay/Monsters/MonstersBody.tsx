@@ -19,6 +19,8 @@ const TdStyleForOffers = styled.td`
 const Table = styled.table`
 width:80%;
 border-collapse: collapse;
+margin-top: 12px;
+margin-bottom: 12px;
 `;
 
 const TrStyleForOffers = styled.tr`
