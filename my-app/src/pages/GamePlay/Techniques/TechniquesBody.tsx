@@ -27,6 +27,7 @@ import { ReactComponent as VegetaTech } from "assets/techniques/vegetaTech.svg";
 
 import { useState } from "react";
 import { Modal } from "antd";
+import { useRWD } from "@appsomesolutions/rwd-utils";
 
 const Main = styled.div`
   width: 100%;
@@ -37,8 +38,9 @@ const Main = styled.div`
 
 const TechniquesStyle = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 `;
 
 const ModalStyle = styled.div`
@@ -50,40 +52,45 @@ const ModalStyle = styled.div`
 export const TechniquesBody = () => {
   const [open, isOpen] = useState(false);
   const [char, setChar] = useState("");
+  const { less } = useRWD();
 
   const WhichTableVisible = (char: string) => {
     switch (char) {
       case "Vegeta":
-        return <VegetaTech />;
+        return <VegetaTech style={{ height: less.md ? `400px` : `auto` }} />;
       case "Buu":
-        return <BuuTech />;
+        return <BuuTech style={{ height: less.md ? `400px` : `auto` }} />;
       case "Goku":
-        return <GokuTech />;
+        return <GokuTech style={{ height: less.md ? `400px` : `auto` }} />;
       case "Gohan":
-        return <GohanTech />;
+        return <GohanTech style={{ height: less.md ? `400px` : `auto` }} />;
       case "Trunks":
-        return <TrunksTech />;
+        return <TrunksTech style={{ height: less.md ? `400px` : `auto` }} />;
       case "Freeza":
-        return <FreezaTech />;
+        return <FreezaTech style={{ height: less.md ? `400px` : `auto` }} />;
       case "C17":
-        return <C17Tech />;
+        return <C17Tech style={{ height: less.md ? `400px` : `auto` }} />;
       case "C18":
-        return <C18Tech />;
+        return <C18Tech style={{ height: less.md ? `400px` : `auto` }} />;
       case "Piccolo":
-        return <PiccoloTech />;
+        return <PiccoloTech style={{ height: less.md ? `400px` : `auto` }} />;
       case "Cell":
-        return <CellTech />;
+        return <CellTech style={{ height: less.md ? `400px` : `auto` }} />;
       case "Brolly":
-        return <BrollyTech />;
+        return <BrollyTech style={{ height: less.md ? `400px` : `auto` }} />;
       case "Bardock":
-        return <BardockTech />;
+        return <BardockTech style={{ height: less.md ? `400px` : `auto` }} />;
     }
   };
 
   return (
     <Main>
       <SubTitle title="Techniques" />
-      <TechniquesStyle>
+      <TechniquesStyle
+        style={{
+          gridTemplateColumns: less.md ? `repeat(4, 1fr)` : `repeat(3, 1fr)`,
+        }}
+      >
         <Vegeta
           onClick={() => {
             isOpen(true);
@@ -158,7 +165,8 @@ export const TechniquesBody = () => {
         />
         <Modal
           title={char}
-          style={{ top: 20 }}
+          style={{ top: less.md ? 8 : 30 }}
+          bodyStyle={{}}
           open={open}
           onOk={() => isOpen(false)}
           onCancel={() => isOpen(false)}
