@@ -31,6 +31,7 @@ const TextStyle = styled.div`
 margin-left: 4px;
 display: flex;
 flex-direction: column;
+width:80%;
 `;
 
 export const ShopOfferElement: FC<Props> = ({title,svg,info}) => {
