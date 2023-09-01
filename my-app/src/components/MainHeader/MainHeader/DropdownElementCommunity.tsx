@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Title = styled.h3`
   text-decoration:none ;
-  color:#DFCD00;
+  color: #BEA6D8;
 `;
 
 export const DropdownElementCommunity  = () => {

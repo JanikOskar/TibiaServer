@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
-import { LeftMenuLi } from './LeftMenuLi';
+import React, { FC } from "react";
+import styled from "styled-components";
+import { LeftMenuLi } from "./LeftMenuLi";
 
 type LeftMenuUlProps = {
   title: string;
@@ -9,14 +9,19 @@ type LeftMenuUlProps = {
 };
 
 const LeftUl = styled.ul`
-  display: block;
   text-align: center;
   padding-left: 0;
 `;
 
-const Title = styled.h2``;
+const Title = styled.h1`
+  width: 150px;
+`;
 
-export const LeftMenuUl: FC<LeftMenuUlProps> = ({ title, numberOfElements, elementsData }) => {
+export const LeftMenuUl: FC<LeftMenuUlProps> = ({
+  title,
+  numberOfElements,
+  elementsData,
+}) => {
   const elements = [];
   for (let i = 0; i < numberOfElements; i++) {
     const { nameOfTitle, link } = elementsData[i];

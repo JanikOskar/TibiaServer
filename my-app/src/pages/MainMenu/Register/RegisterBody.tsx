@@ -1,30 +1,94 @@
 import { Formik, Form, Field, FieldProps } from "formik";
 import { useState } from "react";
 import { object, string, ref, boolean, InferType } from "yup";
-import { Input, Space, Checkbox } from "antd";
+import { Input, Space, Checkbox, Button } from "antd";
 import { SubTitle } from "../../../components/SubTitle";
 import { styled } from "styled-components";
+import { useRWD } from "@appsomesolutions/rwd-utils";
+
+
+const RegisterBodyStyle = styled.section`
+  display: flex;
+  background-color: #799496;
+  flex-direction: column;
+  width:100%;
+`;
 
 const FormStyle = styled(Form)`
-display:flex;
-align-items:center;
-flex-direction:column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 12px;
+  background-color: #799496;
+`;
+
+const FieldStyle = styled(Field)`
+  background-color: #191c21;
+`;
+
+const InputStyle = styled(Input)`
+  color: #dfcd00;
+  border-color: #191c21;
+  border-width: 4px;
+  &:focus {
+    border-color: #dfcd00;
+    border-width:4px;
+  }
+  &:hover {
+    border-color: #dfcd00;
+    border-width:4px;
+  }
+`;
+
+const InputPasswordStyle = styled(Input.Password)`
+  color: #dfcd00;
+  border-color: #191c21;
+  border-width: 4px;
+  &&:focus {
+    border-color: #dfcd00;
+    border-width:4px;
+  }
+  &&:hover {
+    border-color: #dfcd00;
+    border-width: 4px;
+  }
+`;
+
+const ErrorStyle = styled.div`
+  color: #DB162F;
+`;
+
+const CheckboxStyle = styled(Checkbox)`
+&&& {
+  color: #dfcd00;
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #dfcd00;
+  }
+  .ant-checkbox-inner {
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.02), 0px 1px 3px rgba(50, 50, 93, 0.15);
+    border-radius: 4px;
+    background-color: #191c21;
+  }
+}
 `;
 
 export const RegisterBody = () => {
+
   const validationSchema = object({
     login: string()
       .min(2, "Too Short!")
-      .max(50, "Too Long!")
+      .max(20, "Too Long!")
       .required("Required"),
     email: string().email("Invalid email").required("Required"),
-    password: string().required(`PASSWORD IS REQUIRED`),
+    password: string().required(`Password is required`),
     repeatPassword: string()
-      .oneOf([ref("password")], `PASSWORD DONT MATCH`)
-      .required(`"PASSWORD CONFIRM IS REQUIRED`),
+      .oneOf([ref("password")], `Password dont match`)
+      .required(`Password is required`),
     termsAccepted: boolean()
-      .oneOf([true], `THE TERMS AND CONDITION MUST BE ACCEPTED`)
-      .required(`THE TERMS AND CONDITION MUST BE ACCEPTED`),
+      .oneOf([true], `The terms and condition must be accepted`)
+      .required(`The terms and condition must be accepted`),
   });
 
   type FormValues = InferType<typeof validationSchema>;
@@ -44,130 +108,135 @@ export const RegisterBody = () => {
   const [termsAccepted, setTermsAccepted] = useState(false);
 
   return (
-    <div style={{width: '100%'}}>
+    <RegisterBodyStyle>
       <SubTitle title={`Create Account`} />
-      <div style={{width: '100%'}}>
-        <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={(values, actions) => {
-            console.log("val", values);
-            console.log("actions", actions);
-          }}
-        >
-          {({ errors, touched }) => (
-            <FormStyle>
-              <Space direction="vertical" style={{width: '80%'}}>
-                <Field name="email" >
-                  {(fieldProps: FieldProps<string>) => (
-                    <Input
-                      {...fieldProps.field}
-                      value={email}
-                      id="email"
-                      placeholder="Email"
-                      onChange={(event) => {
-                        fieldProps.form.setFieldValue(
-                          "email",
-                          event.target.value
-                        );
-                        setEmail(event.target.value);
-                      }}
-                    />
-                  )}
-                </Field>
-                {errors.email && touched.email ? (
-                  <div>{errors.email}</div>
-                ) : null}
-                <Field name="login">
-                  {(fieldProps: FieldProps<string>) => (
-                    <Input
-                      {...fieldProps.field}
-                      id="login"
-                      value={login}
-                      placeholder="Login"
-                      onChange={(event) => {
-                        fieldProps.form.setFieldValue(
-                          "login",
-                          event.target.value
-                        );
-                        setLogin(event.target.value);
-                      }}
-                    />
-                  )}
-                </Field>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={(values, actions) => {
+          console.log("val", values);
+          console.log("actions", actions);
+        }}
+      >
+        {({ errors, touched }) => (
+          <FormStyle>
+            <Space direction="vertical" style={{ width: "80%" }}>
+              <FieldStyle name="email">
+                {(fieldProps: FieldProps<string>) => (
+                  <InputStyle
+                    {...fieldProps.field}
+                    value={email}
+                    style={{ color: "#212B31" }}
+                    id="email"
+                    placeholder="Email"
+                    onChange={(event: any) => {
+                      fieldProps.form.setFieldValue(
+                        "email",
+                        event.target.value
+                      );
+                      setEmail(event.target.value);
+                    }}
+                  />
+                )}
+              </FieldStyle>
+              {errors.email && touched.email ? (
+                <ErrorStyle>{errors.email}</ErrorStyle>
+              ) : null}
+              <FieldStyle name="login">
+                {(fieldProps: FieldProps<string>) => (
+                  <InputStyle
+                    {...fieldProps.field}
+                    id="login"
+                    value={login}
+                    style={{ color: "#212B31" }}
+                    placeholder="Login"
+                    onChange={(event: any) => {
+                      fieldProps.form.setFieldValue(
+                        "login",
+                        event.target.value
+                      );
+                      setLogin(event.target.value);
+                    }}
+                  />
+                )}
+              </FieldStyle>
 
-                {errors.login && touched.login ? (
-                  <div>{errors.login}</div>
-                ) : null}
+              {errors.login && touched.login ? (
+                <ErrorStyle>{errors.login}</ErrorStyle>
+              ) : null}
 
-                <Field name="password">
-                  {(fieldProps: FieldProps<string>) => (
-                    <Input.Password
-                      {...fieldProps.field}
-                      id="password"
-                      value={password}
-                      placeholder="Input Password"
-                      onChange={(event) => {
-                        fieldProps.form.setFieldValue(
-                          "password",
-                          event.target.value
-                        );
-                        setPassword(event.target.value);
-                      }}
-                    />
-                  )}
-                </Field>
+              <FieldStyle name="password">
+                {(fieldProps: FieldProps<string>) => (
+                  <InputPasswordStyle
+                    {...fieldProps.field}
+                    id="password"
+                    value={password}
+                    style={{ color: "#212B31" }}
+                    placeholder="Input Password"
+                    onChange={(event: any) => {
+                      fieldProps.form.setFieldValue(
+                        "password",
+                        event.target.value
+                      );
+                      setPassword(event.target.value);
+                    }}
+                  />
+                )}
+              </FieldStyle>
 
-                {errors.password && touched.password ? (
-                  <div>{errors.password}</div>
-                ) : null}
+              {errors.password && touched.password ? (
+                <ErrorStyle>{errors.password}</ErrorStyle>
+              ) : null}
 
-                <Field name="repeatPassword">
-                  {(fieldProps: FieldProps<string>) => (
-                    <Input.Password
-                      {...fieldProps.field}
-                      value={repeatPassword}
-                      id="repeatPassword"
-                      placeholder="Repeat Password"
-                      onChange={(event) => {
-                        fieldProps.form.setFieldValue(
-                          "repeatPassword",
-                          event.target.value
-                        );
-                        setRepeatPassword(event.target.value);
-                      }}
-                    />
-                  )}
-                </Field>
+              <FieldStyle name="repeatPassword">
+                {(fieldProps: FieldProps<string>) => (
+                  <InputPasswordStyle
+                    {...fieldProps.field}
+                    value={repeatPassword}
+                    id="repeatPassword"
+                    style={{ color: "#212B31" }}
+                    placeholder="Repeat Password"
+                    onChange={(event: any) => {
+                      fieldProps.form.setFieldValue(
+                        "repeatPassword",
+                        event.target.value
+                      );
+                      setRepeatPassword(event.target.value);
+                    }}
+                  />
+                )}
+              </FieldStyle>
 
-                {errors.repeatPassword && touched.repeatPassword ? (
-                  <div>{errors.repeatPassword}</div>
-                ) : null}
+              {errors.repeatPassword && touched.repeatPassword ? (
+                <ErrorStyle>{errors.repeatPassword}</ErrorStyle>
+              ) : null}
 
-                <Field name="termsAccepted">
-                  {(fieldProps: FieldProps<string>) => (
-                    <Checkbox
-                      {...fieldProps.field}
-                      name="termsAccepted"
-                      checked={termsAccepted}
-                      onChange={(e) => {
-                        fieldProps.field.onChange(e);
-                        setTermsAccepted(e.target.checked);
-                      }}
-                    >
-                      I have read the <a href="/rules">Terms of Service</a> and <a href="/rules">Privacy Policy</a> and I do accept them
-                    </Checkbox>
-                  )}
-                </Field>
-                {errors.termsAccepted && touched.termsAccepted ? (
-                  <div>{errors.termsAccepted}</div>
-                ) : null}
-              </Space>
-              <button style={{width: '10%'}} type="submit">Wyślij</button>
-            </FormStyle>
-          )}
-        </Formik>
-      </div>
-    </div>
+              <FieldStyle name="termsAccepted">
+                {(fieldProps: FieldProps<string>) => (
+                  <CheckboxStyle
+                    {...fieldProps.field}
+                    name="termsAccepted"
+                    checked={termsAccepted}
+                    onChange={(e: any) => {
+                      fieldProps.field.onChange(e);
+                      setTermsAccepted(e.target.checked);
+                    }}
+                  >
+                    I have read the <a href="/rules">Terms of Service</a> and{" "}
+                    <a href="/rules">Privacy Policy</a> and I do accept them
+                  </CheckboxStyle>
+                )}
+              </FieldStyle>
+              {errors.termsAccepted && touched.termsAccepted ? (
+                <ErrorStyle>{errors.termsAccepted}</ErrorStyle>
+              ) : null}
+            </Space>
+            <button style={{ margin: `8px`}} >
+              Wyślij
+            </button>
+          </FormStyle>
+        )}
+      </Formik>
+    </RegisterBodyStyle>
   );
 };

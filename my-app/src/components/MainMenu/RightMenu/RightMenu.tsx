@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { ReactComponent as Discord } from "assets/discord.svg";
 import { Table } from "antd";
+import { useRWD } from "@appsomesolutions/rwd-utils";
 
 const RightMainMenu = styled.section`
   display: block;
@@ -55,17 +56,34 @@ const columns = [
   },
 ];
 
+const WithMD = styled.div`
+  display: none;
+`;
+
 export const RightMenu = () => {
+  const { less } = useRWD();
+
   return (
-    <RightMainMenu className="game-info">
-      <div>Server Status</div>
-      <h3>Online</h3>
-      <div>Highscores</div>
-      <Table columns={columns} dataSource={hisghscoreRightMenu} pagination={false}></Table>
-      <div>Discord</div>
-      <a href="https://discord.gg/pTtng2k9">
-        <Discord />
-      </a>
-    </RightMainMenu>
+    <>
+      {less.md ? (
+        <WithMD />
+      ) : (
+        <RightMainMenu className="game-info">
+          <div>Server Status</div>
+          <h3>Online</h3>
+
+          <div>Highscores</div>
+          <Table
+            columns={columns}
+            dataSource={hisghscoreRightMenu}
+            pagination={false}
+          ></Table>
+          <div>Discord</div>
+          <a href="https://discord.gg/pTtng2k9">
+            <Discord />
+          </a>
+        </RightMainMenu>
+      )}
+    </>
   );
 };

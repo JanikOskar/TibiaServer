@@ -12,7 +12,7 @@ const Link = styled.a`
   margin-left: 20px;
   margin-right: 20px;
   text-decoration:none ;
-  color:#DFCD00;
+  color: #BEA6D8;
 `;
 
 export const HeaderLeftButton = () => (

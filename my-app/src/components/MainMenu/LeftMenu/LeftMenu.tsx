@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { LeftMenuUl } from "./LeftMenuUl";
+import { useRWD } from "@appsomesolutions/rwd-utils";
 
 const LeftMainMenu = styled.section`
   padding: 10px;
-  background-color: aqua;
-  display: block;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const LeftMenu = () => {
@@ -32,33 +32,44 @@ export const LeftMenu = () => {
   ];
 
   const elementsDataLibrary = [
-    { nameOfTitle: "Commands", link: "/commands" },
     { nameOfTitle: "Ban list", link: "/banlist" },
     { nameOfTitle: "Highscores", link: "/highscore/level" },
   ];
 
+  const WithMD = styled.div`
+    display: none;
+  `;
+
+  const { less } = useRWD();
+
   return (
-    <LeftMainMenu>
-      <LeftMenuUl
-        title="Main Menu"
-        numberOfElements={elementsDataMainMenu.length}
-        elementsData={elementsDataMainMenu}
-      />
-      <LeftMenuUl
-        title="Game Play"
-        numberOfElements={elementsDataGamePlay.length}
-        elementsData={elementsDataGamePlay}
-      />
-      <LeftMenuUl
-        title="System"
-        numberOfElements={elementsDataSystem.length}
-        elementsData={elementsDataSystem}
-      />
-      <LeftMenuUl
-        title="Library"
-        numberOfElements={elementsDataLibrary.length}
-        elementsData={elementsDataLibrary}
-      />
-    </LeftMainMenu>
+    <>
+      {less.md ? (
+        <WithMD />
+      ) : (
+        <LeftMainMenu>
+          <LeftMenuUl
+            title="Main Menu"
+            numberOfElements={elementsDataMainMenu.length}
+            elementsData={elementsDataMainMenu}
+          />
+          <LeftMenuUl
+            title="Game Play"
+            numberOfElements={elementsDataGamePlay.length}
+            elementsData={elementsDataGamePlay}
+          />
+          <LeftMenuUl
+            title="System"
+            numberOfElements={elementsDataSystem.length}
+            elementsData={elementsDataSystem}
+          />
+          <LeftMenuUl
+            title="Library"
+            numberOfElements={elementsDataLibrary.length}
+            elementsData={elementsDataLibrary}
+          />
+        </LeftMainMenu>
+      )}
+    </>
   );
 };

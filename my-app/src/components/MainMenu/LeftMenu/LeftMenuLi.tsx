@@ -12,8 +12,12 @@ const MenuLi = styled.li`
   list-style: none;
 `;
 
+const Link = styled.a`
+  text-decoration:none ;
+`;
+
 export const LeftMenuLi: FC<LeftMenuLiProps> = ({ title, page }) => (
   <MenuLi>
-    <a href={page}>{title}</a>
+    <Link href={page}>{title}</Link>
   </MenuLi>
 );
