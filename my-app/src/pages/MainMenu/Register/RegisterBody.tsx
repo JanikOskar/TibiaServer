@@ -4,8 +4,6 @@ import { object, string, ref, boolean, InferType } from "yup";
 import { Input, Space, Checkbox, Button } from "antd";
 import { SubTitle } from "../../../components/SubTitle";
 import { styled } from "styled-components";
-import { useRWD } from "@appsomesolutions/rwd-utils";
-
 
 const RegisterBodyStyle = styled.section`
   display: flex;

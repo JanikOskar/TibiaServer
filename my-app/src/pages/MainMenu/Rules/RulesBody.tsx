@@ -1,8 +1,15 @@
+import { styled } from "styled-components";
 import { SubTitle } from "../../../components/SubTitle";
+
+const RulesBodyStyle = styled.section`
+  display: flex;
+  flex-direction: column;
+  width:100%;
+`;
 
 export const RulesBody = () => {
   return (
-    <div>
+    <RulesBodyStyle>
           <SubTitle title='Server Rules' />
 
       <div>
@@ -84,6 +91,6 @@ export const RulesBody = () => {
           rules by writing report using Ctrl+R shortkey in the game.
         </span>
       </div>
-    </div>
+    </RulesBodyStyle>
   );
 };
