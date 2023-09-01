@@ -7,6 +7,8 @@ const MainMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 12px;
+  margin-top: 12px;
 `;
 
 export const FarmerMissions = () => {
@@ -73,7 +75,7 @@ export const FarmerMissions = () => {
 
   return (
     <MainMenu>
-      <Farmer />
+      <Farmer style={{ marginBottom: `12px`}}/>
         <Table dataSource={dataSource} columns={columns} pagination={false} />
     </MainMenu>
   );

@@ -8,6 +8,8 @@ const MainMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 12px;
+  margin-top: 12px;
 `;
 
 export const DBZMissions = () => {
@@ -350,7 +352,7 @@ export const DBZMissions = () => {
 
   return (
     <MainMenu>
-    <DBZ />
+    <DBZ style={{ marginBottom: `12px`}}/>
         <Table dataSource={SaiyanSagaDataSource} columns={columns} pagination={false} caption={'Saiyan Saga'}/>
         <Table dataSource={FreezaSagaDataSource} columns={columns} pagination={false} caption={'Freeza Saga'} />
         <Table dataSource={CellSagaDataSource} columns={columns} pagination={false} caption={'Cell Saga'} />

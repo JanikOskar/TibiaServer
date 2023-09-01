@@ -7,6 +7,8 @@ const MainMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 12px;
+  margin-top: 12px;
 `;
 
 export const DbMissions = () => {
@@ -100,11 +102,10 @@ export const DbMissions = () => {
 
   return (
     <MainMenu>
-      <DB />
+      <DB style={{ marginBottom: `12px`}}/>
         <Table dataSource={BulmaSagaDataSource} columns={columns}  pagination={false} caption={'Bulma Saga'} />
         <Table dataSource={TrainingSagaDataSource} columns={columns} pagination={false} caption={'Training Saga'} />
         <Table dataSource={PiccoloSagaDataSource} columns={columns} pagination={false}  caption={'Piccolo Saga'} />
-
     </MainMenu>
   );
 };

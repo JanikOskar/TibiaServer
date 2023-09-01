@@ -8,6 +8,8 @@ const MainMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 12px;
+  margin-top: 12px;
 `;
 
 export const DBGTMissions = () => {
@@ -129,7 +131,7 @@ export const DBGTMissions = () => {
 
   return (
     <MainMenu>
-      <DBGT />
+      <DBGT style={{ marginBottom: `12px`}}/>
         <Table dataSource={BebiSagaDataSource} columns={columns} pagination={false} caption={'Bebi Saga'} />
         <Table dataSource={SuperC17SagaDataSource} columns={columns} pagination={false} caption={'Super C17 Saga'} />
         <Table dataSource={ShenronSagaDataSource} columns={columns} pagination={false} caption={'Shrenon Saga'} />

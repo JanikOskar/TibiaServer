@@ -7,6 +7,8 @@ const MainMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 12px;
+  margin-top: 12px;
 `;
 
 export const DailyMissions = () => {
@@ -185,7 +187,7 @@ export const DailyMissions = () => {
 
   return (
     <MainMenu>
-        <Daily />
+        <Daily style={{ marginBottom: `12px`}}/>
         <Table dataSource={dataSource} columns={columns} pagination={false}/>
     </MainMenu>
   );

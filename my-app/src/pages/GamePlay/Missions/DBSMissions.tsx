@@ -8,6 +8,8 @@ const MainMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 12px;
+  margin-top: 12px;
 `;
 
 export const DBSMissions = () => {
@@ -191,7 +193,7 @@ export const DBSMissions = () => {
 
   return (
     <MainMenu>
-      <DBS />
+      <DBS style={{ marginBottom: `12px`}} />
         <Table dataSource={BeerusSagaDataSource} columns={columns} pagination={false} caption={'Beerus Saga'}/>
         <Table dataSource={GoldenFreezaSagaDataSource} columns={columns} pagination={false} caption={'Golden Freeza Saga'}/>
         <Table dataSource={TournamentSagaDataSource} columns={columns} pagination={false} caption={'Tournament Saga'}/>
