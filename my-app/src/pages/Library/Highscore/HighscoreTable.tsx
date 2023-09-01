@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 
 const Table = styled.table`
   border-collapse: collapse;
-  width:100%;
+  width:80%;
   border-spacing: 0px;
   border: 1px solid black;
 `;

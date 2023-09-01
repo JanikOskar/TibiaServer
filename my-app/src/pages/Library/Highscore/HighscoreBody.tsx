@@ -4,10 +4,10 @@ import { HighscoreTableLevel } from "./HighscoreTable";
 import { SubTitle } from "../../../components/SubTitle";
 
 const MainBody = styled.div`
-  padding: 4px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
 `;
 
 const Table = styled.table`
@@ -15,6 +15,8 @@ const Table = styled.table`
   justify-content: center;
   border-collapse: collapse;
   border-spacing: 0px;
+  width:80%;
+
 `;
 
 const Tr = styled.tr`
@@ -27,26 +29,22 @@ const Th = styled.th``;
 const Td = styled.td`
   border: 1px solid black;
   padding: 4px;
+  text-align:center;
 `;
 
 const Tbody = styled.tbody``;
 
 export const HighscoreBody: FC = () => (
   <MainBody>
-    <div style={{ width: "80%" }}>
     <SubTitle title='Highscore' />
       <Table>
         <Tbody>
           <Tr>
             <Td>
-              <div>
                 <a href="/highscore/level">Level</a>
-              </div>
             </Td>
             <Td>
-              <div>
                 <a href="/highscore/kiLevel">Ki Level</a>
-              </div>
             </Td>
             <Td>
               <div>
@@ -87,9 +85,5 @@ export const HighscoreBody: FC = () => (
         </Tbody>
       </Table>
       <HighscoreTableLevel />
-      <div>
-        <a>Next page</a>
-      </div>
-    </div>
   </MainBody>
 );

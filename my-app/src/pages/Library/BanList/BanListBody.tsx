@@ -3,13 +3,20 @@ import { FC, useEffect, useState } from "react";
 import { SubTitle } from "../../../components/SubTitle";
 import React from "react";
 
+const BanListMenu = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const Table = styled.table`
   border-collapse: collapse;
   border: 1px solid black;
   width: 80%;
   border-spacing: 0px;
-  margin:0 auto;
-  text-align:center;
+  margin: 0 auto;
+  text-align: center;
 `;
 
 const Tr = styled.tr`
@@ -138,58 +145,58 @@ export const BanListBody: FC = () => {
   }, []);
 
   return (
-    <div style={{width:'100%'}}>
-              <SubTitle title='Ban List' />
-          <Table>
-            <Thead>
-              <Tr>
-                <NameColumn>
-                  <NameOfRow>
-                    <b>Name</b>
-                  </NameOfRow>
-                </NameColumn>
-                <ExpiresColumn>
-                  <NameOfRow>
-                    <b>Expires</b>
-                  </NameOfRow>
-                </ExpiresColumn>
-                <CommentColumn>
-                  <NameOfRow>
-                    <b>Comment</b>
-                  </NameOfRow>
-                </CommentColumn>
-                <AddedByColumn>
-                  <NameOfRow>
-                    <b>Added By</b>
-                  </NameOfRow>
-                </AddedByColumn>
-              </Tr>
-            </Thead>
-            {users.map((element, index) => (
-              <Tr key={index}>
-                <Td>
-                  <NameOfRow>
-                    <span>{element.name}</span>
-                  </NameOfRow>
-                </Td>
-                <Td>
-                  <NameOfRow>
-                    <center>{element.expiredDate}</center>
-                  </NameOfRow>
-                </Td>
-                <Td>
-                  <NameOfRow>
-                    <center>{element.comment}</center>
-                  </NameOfRow>
-                </Td>
-                <Td>
-                  <NameOfRow>
-                    <center>{element.addedBy}</center>
-                  </NameOfRow>
-                </Td>
-              </Tr>
-            ))}
-          </Table>
-    </div>
+    <BanListMenu>
+      <SubTitle title="Ban List" />
+      <Table>
+        <Thead>
+          <Tr>
+            <NameColumn>
+              <NameOfRow>
+                <b>Name</b>
+              </NameOfRow>
+            </NameColumn>
+            <ExpiresColumn>
+              <NameOfRow>
+                <b>Expires</b>
+              </NameOfRow>
+            </ExpiresColumn>
+            <CommentColumn>
+              <NameOfRow>
+                <b>Comment</b>
+              </NameOfRow>
+            </CommentColumn>
+            <AddedByColumn>
+              <NameOfRow>
+                <b>Added By</b>
+              </NameOfRow>
+            </AddedByColumn>
+          </Tr>
+        </Thead>
+        {users.map((element, index) => (
+          <Tr key={index}>
+            <Td>
+              <NameOfRow>
+                <span>{element.name}</span>
+              </NameOfRow>
+            </Td>
+            <Td>
+              <NameOfRow>
+                <center>{element.expiredDate}</center>
+              </NameOfRow>
+            </Td>
+            <Td>
+              <NameOfRow>
+                <center>{element.comment}</center>
+              </NameOfRow>
+            </Td>
+            <Td>
+              <NameOfRow>
+                <center>{element.addedBy}</center>
+              </NameOfRow>
+            </Td>
+          </Tr>
+        ))}
+      </Table>
+    </BanListMenu>
   );
 };
