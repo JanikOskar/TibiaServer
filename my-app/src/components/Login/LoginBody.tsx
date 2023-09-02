@@ -6,15 +6,21 @@ import { styled } from "styled-components";
 import { SubTitle } from "components/SubTitle";
 
 const FormStyle = styled(Form)`
-display:flex;
-align-items:center;
-flex-direction:column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const LoginBodyStyle = styled.section`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: #1b191d;
 `;
 
 export const LoginBody = () => {
   const validationSchema = object({
-    login: string()
-      .required("Required"),
+    login: string().required("Required"),
     password: string().required(`PASSWORD IS REQUIRED`),
   });
 
@@ -29,9 +35,9 @@ export const LoginBody = () => {
   const [password, setPassword] = useState("");
 
   return (
-    <div style={{width: '100%'}}>
+    <LoginBodyStyle style={{ width: "100%", height: "100vh" }}>
       <SubTitle title={`Login`} />
-      <div style={{width: '100%'}}>
+      <div style={{ width: "100%" }}>
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -42,7 +48,7 @@ export const LoginBody = () => {
         >
           {({ errors, touched }) => (
             <FormStyle>
-              <Space direction="vertical" style={{width: '80%'}}>
+              <Space direction="vertical" style={{ width: "80%" }}>
                 <Field name="login">
                   {(fieldProps: FieldProps<string>) => (
                     <Input
@@ -86,11 +92,13 @@ export const LoginBody = () => {
                   <div>{errors.password}</div>
                 ) : null}
               </Space>
-              <button style={{width: '10%'}} type="submit">Zaloguj</button>
+              <button style={{ padding: `12px` }} type="submit">
+                Zaloguj
+              </button>
             </FormStyle>
           )}
         </Formik>
       </div>
-    </div>
+    </LoginBodyStyle>
   );
 };

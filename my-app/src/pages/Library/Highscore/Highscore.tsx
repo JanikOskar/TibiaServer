@@ -4,9 +4,7 @@ import { LeftMenu } from "../../../components/MainMenu/LeftMenu/LeftMenu";
 import { HighscoreBody } from "./HighscoreBody";
 import { RightMenu } from "../../../components/MainMenu/RightMenu/RightMenu";
 
-
 const Main = styled.div`
-height:100vh;
 display:flex;
 flex:1;
 justify-content:center;

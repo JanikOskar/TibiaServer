@@ -16,21 +16,27 @@ const Table = styled.table`
   border: 1px solid black;
   padding: 4px;
   margin: 8px;
+  border-color: #BEA6D8;
 `;
 
 const Tr = styled.tr`
   padding: 4px;
+  background-color: #3D3942;
+  color: #DFCD00;
+  border-color: #BEA6D8;
 `;
 
 const Td = styled.td`
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   padding: 4px;
+  border-color: #BEA6D8;
 `;
 
 const Thead = styled.thead`
   border: 1px solid black;
   padding: 4px;
+  border-color: #BEA6D8;
 `;
 
 export const TeamBody: FC = () => (
@@ -39,7 +45,7 @@ export const TeamBody: FC = () => (
       <Table>
         <Thead>
           <Tr>
-            <Td>
+            <Td >
               <b>Name</b>
             </Td>
             <Td>

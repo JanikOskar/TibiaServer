@@ -16,6 +16,8 @@ const TdStyleForOffers = styled.td`
   padding: 4px;
   margin-bottom:4px;
   text-align:center;
+  border-color: #BEA6D8;
+
 `;
 
 const TrStyleForOffers = styled.tr`

@@ -32,6 +32,7 @@ const TypeOfItemsStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #dfcd00;
 `;
 
 export const ItemsBody = () => {

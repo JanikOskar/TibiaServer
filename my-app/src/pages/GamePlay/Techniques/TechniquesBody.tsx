@@ -92,72 +92,84 @@ export const TechniquesBody = () => {
         }}
       >
         <Vegeta
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("Vegeta");
           }}
         />
         <Buu
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("Buu");
           }}
         />
         <Goku
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("Goku");
           }}
         />
         <Gohan
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("Gohan");
           }}
         />
         <Trunks
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("Trunks");
           }}
         />
         <Freeza
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("Freeza");
           }}
         />
         <C17
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("C17");
           }}
         />
         <C18
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("C18");
           }}
         />
         <Piccolo
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("Piccolo");
           }}
         />
         <Cell
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("Cell");
           }}
         />
         <Brolly
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("Brolly");
           }}
         />
         <Bardock
+          style={{ cursor: "pointer" }}
           onClick={() => {
             isOpen(true);
             setChar("Bardock");

@@ -17,7 +17,6 @@ import { DragonBalls } from "pages/System/DragonBalls/DragonBalls";
 import { AutoLoot } from "pages/System/AutoLoot/AutoLoot";
 import { Login } from "components/Login/Login";
 
-
 export const AppRouter: FunctionComponent = () => {
   return (
     <>
@@ -40,11 +39,9 @@ export const AppRouter: FunctionComponent = () => {
           <Route path="/dragonball" element={<DragonBalls />} />
           <Route path="/autoloot" element={<AutoLoot />} />
           <Route path="/login" element={<Login />} />
-
-
-
         </Routes>
       </BrowserRouter>
-    </>
+      </>
+
   );
 };

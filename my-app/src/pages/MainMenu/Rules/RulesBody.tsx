@@ -4,17 +4,24 @@ import { SubTitle } from "../../../components/SubTitle";
 const RulesBodyStyle = styled.section`
   display: flex;
   flex-direction: column;
-  width:100%;
+  width: 100%;
+`;
+
+const TitleStyle = styled.b`
+  color: #dfcd00;
+`;
+
+const ContentStyle = styled.span`
+  color: #bea6d8;
 `;
 
 export const RulesBody = () => {
   return (
     <RulesBodyStyle>
-          <SubTitle title='Server Rules' />
-
-      <div>
-        <span>
-          <b>ACCOUNTS</b>
+      <SubTitle title="Server Rules" />
+      <div style={{padding: '8px 0px 8px 8px'}}>
+        <ContentStyle>
+          <TitleStyle>ACCOUNTS</TitleStyle>
           <br />
           1.Administration isn't responsible for lost items of hacked player.
           <br />
@@ -26,7 +33,7 @@ export const RulesBody = () => {
           4.Selling character or items for real money or trading for something
           on other servers is prohibited.
           <br />
-          <b>NICKNAME'S</b>
+          <TitleStyle>NICKNAME'S</TitleStyle>
           <br />
           1.Nickname should have at least 3 letters.
           <br />
@@ -47,7 +54,8 @@ export const RulesBody = () => {
           8.Administrator may give namelock or delete character to a person who
           doesn't follow these rules.
           <br />
-          <b>BOTS</b>
+          <TitleStyle>BOTS</TitleStyle>
+          <br />
           1.Cavebot/Targeting is allowed but you have to watch your character
           (you can't be AFK).
           <br />
@@ -57,7 +65,7 @@ export const RulesBody = () => {
           3.Multiclient is allowed but you can't use it to block respawns/sagas
           or interupt other players.
           <br />
-          <b>CHAT'S</b>
+          <TitleStyle>CHAT'S</TitleStyle>
           <br />
           1.Trade - chat only for the purchase / sale and exchange of items.
           <br />
@@ -73,8 +81,8 @@ export const RulesBody = () => {
           <br />
           6.Disregard these rules will be punished at the discretion of admin.
           <br />
-          <b>BUGS</b>
-          <br/>
+          <TitleStyle>BUGS</TitleStyle>
+          <br />
           1.Admin reserves the right to revert game database at 24 hours in case
           of a serious bug used by players.
           <br />
@@ -89,7 +97,7 @@ export const RulesBody = () => {
           <br />
           5.The player has the right to report another player violating the
           rules by writing report using Ctrl+R shortkey in the game.
-        </span>
+        </ContentStyle>
       </div>
     </RulesBodyStyle>
   );

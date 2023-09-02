@@ -6,6 +6,8 @@ const LeftMainMenu = styled.section`
   padding: 10px;
   display: flex;
   flex-direction: column;
+  background-color: #1e2128;
+  color: #BEA6D8;
 `;
 
 export const LeftMenu = () => {

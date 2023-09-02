@@ -33,6 +33,8 @@ const Table = styled.table`
   justify-content: center;
   border-collapse: collapse;
   border-spacing: 0px;
+  cursor: pointer;
+  margin: 8px 0;
 `;
 
 const Tr = styled.tr`
@@ -41,7 +43,10 @@ const Tr = styled.tr`
 
 const Td = styled.td`
   border: 1px solid black;
-  padding: 4px;
+  padding: 8px;
+  background-color: #786C85;
+  border-color: #BEA6D8;
+  color: #dfcd00;
 `;
 
 const TableStyleForOffers = styled.table`

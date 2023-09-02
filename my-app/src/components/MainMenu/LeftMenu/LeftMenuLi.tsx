@@ -14,6 +14,7 @@ const MenuLi = styled.li`
 
 const Link = styled.a`
   text-decoration:none ;
+  color: #BEA6D8;
 `;
 
 export const LeftMenuLi: FC<LeftMenuLiProps> = ({ title, page }) => (

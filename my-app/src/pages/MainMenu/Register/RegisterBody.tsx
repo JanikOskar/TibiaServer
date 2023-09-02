@@ -7,9 +7,9 @@ import { styled } from "styled-components";
 
 const RegisterBodyStyle = styled.section`
   display: flex;
-  background-color: #799496;
   flex-direction: column;
   width:100%;
+  background-color: #3D3942;
 `;
 
 const FormStyle = styled(Form)`
@@ -17,7 +17,6 @@ const FormStyle = styled(Form)`
   align-items: center;
   flex-direction: column;
   padding-top: 12px;
-  background-color: #799496;
 `;
 
 const FieldStyle = styled(Field)`
@@ -58,7 +57,7 @@ const ErrorStyle = styled.div`
 
 const CheckboxStyle = styled(Checkbox)`
 &&& {
-  color: #dfcd00;
+  color: #BEA6D8;
   .ant-checkbox-checked .ant-checkbox-inner {
     background-color: #dfcd00;
   }
@@ -67,7 +66,6 @@ const CheckboxStyle = styled(Checkbox)`
     height: 20px;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.02), 0px 1px 3px rgba(50, 50, 93, 0.15);
     border-radius: 4px;
-    background-color: #191c21;
   }
 }
 `;
@@ -220,8 +218,8 @@ export const RegisterBody = () => {
                       setTermsAccepted(e.target.checked);
                     }}
                   >
-                    I have read the <a href="/rules">Terms of Service</a> and{" "}
-                    <a href="/rules">Privacy Policy</a> and I do accept them
+                    I have read the <a href="/rules" style={{color: '#dfcd00'}} >Terms of Service</a> and{" "}
+                    <a href="/rules" style={{color: '#dfcd00'}}>Privacy Policy</a> and I do accept them
                   </CheckboxStyle>
                 )}
               </FieldStyle>
@@ -229,9 +227,11 @@ export const RegisterBody = () => {
                 <ErrorStyle>{errors.termsAccepted}</ErrorStyle>
               ) : null}
             </Space>
-            <button style={{ margin: `8px`}} >
+            <div style={{width: `80%`,display: 'flex', justifyContent: 'flex-end'}}>
+            <button style={{ padding: `10px`, backgroundColor: '#1B191D', color: '#dfcd00',marginBottom: '8px'}}>
               Wyślij
             </button>
+            </div>
           </FormStyle>
         )}
       </Formik>

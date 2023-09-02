@@ -10,11 +10,14 @@ type LeftMenuUlProps = {
 
 const LeftUl = styled.ul`
   text-align: center;
-  padding-left: 0;
+  margin: 0;
+  padding: 12px;
+  background-color: #212B31;
 `;
 
 const Title = styled.h1`
   width: 150px;
+  background-color: #212B31;
 `;
 
 export const LeftMenuUl: FC<LeftMenuUlProps> = ({

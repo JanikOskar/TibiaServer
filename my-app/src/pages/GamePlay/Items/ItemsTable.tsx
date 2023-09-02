@@ -5,16 +5,22 @@ import { ItemsList } from "./ItemsList";
 type Props = {
   typeOfItems: string;
 };
+
 const TdStyleForOffers = styled.td`
   border: 1px solid black;
   padding: 4px;
   margin-bottom: 4px;
+  color: #dfcd00;
+  border-color: #bea6d8;
+  background-color: #786c85;
 `;
 
 const Table = styled.table`
   width: 80%;
   border-collapse: collapse;
   margin-bottom: 12px;
+  color: #bea6d8;
+  background-color: #3d3942;
 `;
 
 const TrStyleForOffers = styled.tr``;

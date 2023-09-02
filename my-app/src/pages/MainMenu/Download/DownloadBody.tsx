@@ -28,6 +28,18 @@ const ButtonStyled = styled(Button)`
   margin-bottom: 10px;
   padding: 10px;
   text-decoration: none;
+  &&:focus {
+    border-color: #dfcd00;
+    border-width:4px;
+    color: #1e2128;
+    background-color: #dfcd00;
+  }
+  &&:hover {
+    border-color: #dfcd00;
+    border-width:4px;
+    color: #1e2128;
+    background-color: #dfcd00;
+  }
 `;
 
 export const DownloadBody = () => {

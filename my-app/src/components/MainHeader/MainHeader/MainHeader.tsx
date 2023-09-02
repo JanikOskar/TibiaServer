@@ -15,10 +15,12 @@ const Nav = styled.nav`
 
 const LeftPanel = styled.div`
   display: flex;
+
 `;
 
 const RightPanel = styled.div`
   display: flex;
+
 `;
 
 export const MainHeader = () => {

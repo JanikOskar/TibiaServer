@@ -8,6 +8,7 @@ const RightMainMenu = styled.section`
   display: block;
   text-align: center;
   padding: 10px;
+  background-color: #1e2128;
 `;
 
 const hisghscoreRightMenu = [
@@ -60,6 +61,10 @@ const WithMD = styled.div`
   display: none;
 `;
 
+const ContentOfRightMenu = styled.div`
+background-color: #212B31;
+`;
+
 export const RightMenu = () => {
   const { less } = useRWD();
 
@@ -69,6 +74,7 @@ export const RightMenu = () => {
         <WithMD />
       ) : (
         <RightMainMenu className="game-info">
+          <ContentOfRightMenu>
           <div>Server Status</div>
           <h3>Online</h3>
 
@@ -82,6 +88,7 @@ export const RightMenu = () => {
           <a href="https://discord.gg/pTtng2k9">
             <Discord />
           </a>
+          </ContentOfRightMenu>
         </RightMainMenu>
       )}
     </>

@@ -7,6 +7,7 @@ const LatestNews = styled.section`
   display: flex;
   flex: 1;
   flex-direction: column;
+  background-color: #1B191D;
 `;
 
 const BoxContent = styled.div`

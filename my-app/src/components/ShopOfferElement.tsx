@@ -4,15 +4,17 @@ import styled from "styled-components";
 type Props = {
   title: string;
   svg: any;
-  info:string
+  info: string;
 };
 
 const TdStyleForOffers = styled.td`
   border: 1px solid black;
   padding: 4px;
-  margin-bottom:4px;
+  margin-bottom: 4px;
   display: flex;
   align-items: center;
+  background-color: #3D3942;
+  border-color: #BEA6D8;
 `;
 
 const TrStyleForOffers = styled.tr`
@@ -23,32 +25,39 @@ const ItemsOffer = styled.div`
   width: 100%;
   margin-left: 4px;
   display: flex;
-  align-items:center;
-  justify-content:space-between;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const TextStyle = styled.div`
-margin-left: 4px;
-display: flex;
-flex-direction: column;
-width:80%;
+  margin-left: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-right: 4px;
+  color: #BEA6D8;
 `;
 
-export const ShopOfferElement: FC<Props> = ({title,svg,info}) => {
+const LinkStyle = styled.a`
+  color: #dfcd00;
+  text-decoration:none;
+`;
+
+export const ShopOfferElement: FC<Props> = ({ title, svg, info }) => {
   return (
-        <TrStyleForOffers>
-          <TdStyleForOffers>
-            {svg}
-            <ItemsOffer>
-              <TextStyle>
-              <div>{title}</div>
-              <div>{info}</div>
-              </TextStyle>
-              <div>
-                <a href="/register">Login to buy</a>
-              </div>
-            </ItemsOffer>
-          </TdStyleForOffers>
-        </TrStyleForOffers>
+    <TrStyleForOffers>
+      <TdStyleForOffers>
+        {svg}
+        <ItemsOffer>
+          <TextStyle>
+            <div style={{color: 'gold'}}>{title}</div>
+            <div>{info}</div>
+          </TextStyle>
+          <div style={{ textAlign: "center", color: '#dfcd00' }}>
+            <LinkStyle href="/login">Login to buy</LinkStyle>
+          </div>
+        </ItemsOffer>
+      </TdStyleForOffers>
+    </TrStyleForOffers>
   );
 };
