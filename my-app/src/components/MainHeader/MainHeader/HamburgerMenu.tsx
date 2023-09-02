@@ -6,7 +6,7 @@ import styled from "styled-components";
 const HamburgerMenuStyled = styled.div`
   padding: 12px 16px;
   height: 56px;
-  background-color: #1E2128;
+  background-color: #1e2128;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,14 +30,14 @@ export const HamburgerMenu = () => {
       <HamburgerMenuStyled>
         {!isOpen ? (
           <MenuUnfoldOutlined
-          style={{color: 'white'}}
+            style={{ color: "white" }}
             onClick={() => {
               setIsOpen(true);
             }}
           />
         ) : (
           <MenuFoldOutlined
-          style={{color: 'white'}}
+            style={{ color: "white" }}
             onClick={() => {
               setIsOpen(false);
             }}

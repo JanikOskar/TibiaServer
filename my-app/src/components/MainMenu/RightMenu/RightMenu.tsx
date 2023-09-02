@@ -62,7 +62,39 @@ const WithMD = styled.div`
 `;
 
 const ContentOfRightMenu = styled.div`
-background-color: #212B31;
+  background-color: #212b31;
+  padding-top: 12px;
+`;
+
+const TableStyle = styled(Table)`
+  margin-bottom: 12px;
+  width: 100%;
+  &&& td.ant-table-cell {
+    text-align: center;
+  }
+  &&& th.ant-table-cell {
+    position: sticky;
+    color: #dfcd00;
+    background-color: #786c85;
+    border: 1px solid #bea6d8;
+  }
+  &&& th.ant-table-cell::before {
+    display: none;
+  }
+  &&:where(.css-dev-only-do-not-override-k7429z).ant-table-wrapper
+    .ant-table-tbody
+    > tr
+    > th,
+  :where(.css-dev-only-do-not-override-k7429z).ant-table-wrapper
+    .ant-table-tbody
+    > tr
+    > td {
+    border: 1px solid #bea6d8;
+  }
+  &&& td.ant-table-cell.ant-table-cell-row-hover {
+    color: #dfcd00;
+    background-color: #786c85;
+  }
 `;
 
 export const RightMenu = () => {
@@ -75,19 +107,26 @@ export const RightMenu = () => {
       ) : (
         <RightMainMenu className="game-info">
           <ContentOfRightMenu>
-          <div>Server Status</div>
-          <h3>Online</h3>
+            <h3 style={{ color: "#bea6d8", marginTop: 8 }}>Server Status</h3>
+            <h1 style={{ color: "#dfcd00" }}>Offline</h1>
 
-          <div>Highscores</div>
-          <Table
-            columns={columns}
-            dataSource={hisghscoreRightMenu}
-            pagination={false}
-          ></Table>
-          <div>Discord</div>
-          <a href="https://discord.gg/pTtng2k9">
-            <Discord />
-          </a>
+            <h3 style={{ color: "#bea6d8", marginBottom: 4 }}>Top Players</h3>
+            <TableStyle
+              columns={columns}
+              dataSource={hisghscoreRightMenu}
+              pagination={false}
+              onRow={() => ({
+                style: {
+                  border: "1px solid #bea6d8",
+                  background: "#3d3942",
+                  color: "#bea6d8",
+                },
+              })}
+            />
+            <h3 style={{ color: "#bea6d8", marginBottom: 4 }}>Discord</h3>
+            <a href="https://discord.gg/pTtng2k9">
+              <Discord />
+            </a>
           </ContentOfRightMenu>
         </RightMainMenu>
       )}

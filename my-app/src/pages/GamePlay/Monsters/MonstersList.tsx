@@ -28,38 +28,88 @@ import { ReactComponent as Shenrons } from "assets/monsters/Shenrons.svg";
 
 import { MonstersTableElements } from "./MonstersTableElements";
 
-
 export const MonstersList = () => {
-
   return (
     <>
-   <MonstersTableElements name={"Amebo"} svg={<Amebo />}  level='1-5' />
-   <MonstersTableElements name={"Undeads"} svg={<Undeads />}  level='1-100' />
-   <MonstersTableElements name={"Animals"} svg={<Animals />}  level='1-50' />
-   <MonstersTableElements name={"Bandits"} svg={<Bandits />}  level='5-25' />
-   <MonstersTableElements name={"Assassins"} svg={<Assassins />}  level='10-100' />
-   <MonstersTableElements name={"Androids"} svg={<Androids />}  level='25' />
-   <MonstersTableElements name={"Tanks"} svg={<Tanks />}  level='25' />
-   <MonstersTableElements name={"Pirates"} svg={<Pirates />}  level='25' />
-   <MonstersTableElements name={"Zeltajin"} svg={<Zeltajin />}  level='25-75' />
-   <MonstersTableElements name={"Saibamans"} svg={<Saibamans />}  level='25-100' />
-   <MonstersTableElements name={"Machines"} svg={<Machines />}  level='25-150' />
-   <MonstersTableElements name={"Saiyans"} svg={<Saiyans />}  level='25-150' />
-   <MonstersTableElements name={"Majins"} svg={<Majins />}  level='25-300' />
-   <MonstersTableElements name={"Eagle Fighters"} svg={<EagleFighters />}  level='50' />
-   <MonstersTableElements name={"Elementals"} svg={<Elementals />}  level='50-75' />
-   <MonstersTableElements name={"Friezas"} svg={<Friezas />}  level='50-100' />
-   <MonstersTableElements name={"Heaven Soldiers"} svg={<HeavenSoldiers />}  level='50-150' />
-   <MonstersTableElements name={"Janembas"} svg={<Janembas />}  level='50-200' />
-   <MonstersTableElements name={"Namekjins"} svg={<Namekjins />}  level='50-200' />
-   <MonstersTableElements name={"Oozaru"} svg={<Oozaru />}  level='50-200' />
-   <MonstersTableElements name={"Tsufurins"} svg={<Tsufurins />}  level='50-200' />
-   <MonstersTableElements name={"Soldiers"} svg={<Soldiers />}  level='75' />
-   <MonstersTableElements name={"Cells"} svg={<Cells />}  level='75-200' />
-   <MonstersTableElements name={"Shins"} svg={<Shins />}  level='100-150' />
-   <MonstersTableElements name={"Buus"} svg={<Buus />}  level='100-150' />
-   <MonstersTableElements name={"Future Androids"} svg={<FutureAndroids />}  level='200' />
-   <MonstersTableElements name={"Shenrons"} svg={<Shenrons />}  level='300' />
-   </>
+      <MonstersTableElements name={"Amebo"} svg={<Amebo />} level="1-5" />
+      <MonstersTableElements name={"Undeads"} svg={<Undeads />} level="1-100" />
+      <MonstersTableElements name={"Animals"} svg={<Animals />} level="1-50" />
+      <MonstersTableElements name={"Bandits"} svg={<Bandits />} level="5-25" />
+      <MonstersTableElements
+        name={"Assassins"}
+        svg={<Assassins />}
+        level="10-100"
+      />
+      <MonstersTableElements name={"Androids"} svg={<Androids />} level="25" />
+      <MonstersTableElements name={"Tanks"} svg={<Tanks />} level="25" />
+      <MonstersTableElements name={"Pirates"} svg={<Pirates />} level="25" />
+      <MonstersTableElements
+        name={"Zeltajin"}
+        svg={<Zeltajin />}
+        level="25-75"
+      />
+      <MonstersTableElements
+        name={"Saibamans"}
+        svg={<Saibamans />}
+        level="25-100"
+      />
+      <MonstersTableElements
+        name={"Machines"}
+        svg={<Machines />}
+        level="25-150"
+      />
+      <MonstersTableElements
+        name={"Saiyans"}
+        svg={<Saiyans />}
+        level="25-150"
+      />
+      <MonstersTableElements name={"Majins"} svg={<Majins />} level="25-300" />
+      <MonstersTableElements
+        name={"Eagle Fighters"}
+        svg={<EagleFighters />}
+        level="50"
+      />
+      <MonstersTableElements
+        name={"Elementals"}
+        svg={<Elementals />}
+        level="50-75"
+      />
+      <MonstersTableElements
+        name={"Friezas"}
+        svg={<Friezas />}
+        level="50-100"
+      />
+      <MonstersTableElements
+        name={"Heaven Soldiers"}
+        svg={<HeavenSoldiers />}
+        level="50-150"
+      />
+      <MonstersTableElements
+        name={"Janembas"}
+        svg={<Janembas />}
+        level="50-200"
+      />
+      <MonstersTableElements
+        name={"Namekjins"}
+        svg={<Namekjins />}
+        level="50-200"
+      />
+      <MonstersTableElements name={"Oozaru"} svg={<Oozaru />} level="50-200" />
+      <MonstersTableElements
+        name={"Tsufurins"}
+        svg={<Tsufurins />}
+        level="50-200"
+      />
+      <MonstersTableElements name={"Soldiers"} svg={<Soldiers />} level="75" />
+      <MonstersTableElements name={"Cells"} svg={<Cells />} level="75-200" />
+      <MonstersTableElements name={"Shins"} svg={<Shins />} level="100-150" />
+      <MonstersTableElements name={"Buus"} svg={<Buus />} level="100-150" />
+      <MonstersTableElements
+        name={"Future Androids"}
+        svg={<FutureAndroids />}
+        level="200"
+      />
+      <MonstersTableElements name={"Shenrons"} svg={<Shenrons />} level="300" />
+    </>
   );
 };

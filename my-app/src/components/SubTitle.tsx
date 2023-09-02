@@ -11,7 +11,7 @@ const Main = styled.div`
   font-family: "Catamaran", sans-serif;
   font-size: 22px;
   color: #f09b00;
-  background: -webkit-linear-gradient(#FFFFFF, #FFDD00);
+  background: -webkit-linear-gradient(#ffffff, #ffdd00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;

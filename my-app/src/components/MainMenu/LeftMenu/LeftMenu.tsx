@@ -7,7 +7,7 @@ const LeftMainMenu = styled.section`
   display: flex;
   flex-direction: column;
   background-color: #1e2128;
-  color: #BEA6D8;
+  color: #bea6d8;
 `;
 
 export const LeftMenu = () => {

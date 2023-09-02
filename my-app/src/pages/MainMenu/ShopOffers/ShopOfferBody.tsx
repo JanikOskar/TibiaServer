@@ -17,7 +17,6 @@ import { ReactComponent as Prem10 } from "assets/Prem10.svg";
 import { ReactComponent as Prem30 } from "assets/Prem30.svg";
 import { ReactComponent as SecOut } from "assets/shopOutfits/SecOut.svg";
 
-
 import { ShopOfferElement } from "components/ShopOfferElement";
 import { useState } from "react";
 
@@ -44,8 +43,8 @@ const Tr = styled.tr`
 const Td = styled.td`
   border: 1px solid black;
   padding: 8px;
-  background-color: #786C85;
-  border-color: #BEA6D8;
+  background-color: #786c85;
+  border-color: #bea6d8;
   color: #dfcd00;
 `;
 
@@ -57,78 +56,161 @@ const TableStyleForOffers = styled.table`
 `;
 
 export const ShopOfferBody = () => {
-  const [whichTable, setWhichTable] = useState('items');
-  
+  const [whichTable, setWhichTable] = useState("items");
+
   const whichTableVisible = (whichTable: string) => {
-    switch (whichTable){
-    case 'items':
-    return (
-      <>
-    <ShopOfferElement title="Gold" info="100 Gold" svg={<Gold />}/>
-    <ShopOfferElement title="Senzu" info="100 Senzu" svg={<Senzu />}/>
-    <ShopOfferElement title="Red Senzu" info="100 Red Senzu" svg={<RedSenzu />}/>
-    <ShopOfferElement title="Band Of Loss" info="With this item you wont lose eq when you die" svg={<Bol />}/>
-    <ShopOfferElement title="Frag Remover" info="This item will remove all your frags and skulls." svg={<FR />}/>
-    <ShopOfferElement title="Dragon Ball Bag" info="Bag with 36 slots" svg={<DBBag />}/>
-
-    </>
-    )
-    case 'premium':
-    return (
-      <>
-    <ShopOfferElement title="
-10 Days Of Premium" info="You will receive 10 days of premium in your account" svg={<Prem10 />}/>
-    <ShopOfferElement title="
-30 Days Of Premium" info="You will receive 30 days of premium in your account" svg={<Prem30 />}/>
-    </>
-    )
-    case 'outfits':
-    return (
-      <>
-    <ShopOfferElement title="First Special Outfit Scroll" info="You will receive first special outfit to your character" svg={<FirstOut />}/>
-    <ShopOfferElement title="
-Second Special Outfit Scroll" info="You will receive first special outfit to your character" svg={<SecOut />}/>
-    </>
-    )
-    case 'special':
-    return (
-      <>
-    <ShopOfferElement title="
-10 Days Premium Card" info="You will receive card with 10 premium days (tradable)" svg={<Prem10 />}/>
-    <ShopOfferElement title="
-30 Days Premium Card" info="You will receive card with 30 premium days (tradable)" svg={<Prem30 />}/>
-    <ShopOfferElement title="
-1000 Premium Points Scroll" info="You will receive scroll with 1000 premium points (tradable)" svg={<PP1K />}/>
-    <ShopOfferElement title="
-3000 Premium Points Scroll" info="You will receive scroll with 3000 premium points  (tradable)" svg={<PP3K />}/>
-    <ShopOfferElement title="Boost Exp" info="
-20% higher exp rate for 2 hours." svg={<BoostExp />}/>
-    <ShopOfferElement title="Boost HP" info="
-25% more health for 2 hours." svg={<BoostHP />}/>
-    <ShopOfferElement title="Boost Ki" info="25% more ki for 2 hours." svg={<BoostMP />}/>
-    <ShopOfferElement title="Boost Drop" info="
-2x higher loot drop for 2 hours" svg={<DropBoost />}/>
-
-
-    </>
-    )
-  }
-}
+    switch (whichTable) {
+      case "items":
+        return (
+          <>
+            <ShopOfferElement title="Gold" info="100 Gold" svg={<Gold />} />
+            <ShopOfferElement title="Senzu" info="100 Senzu" svg={<Senzu />} />
+            <ShopOfferElement
+              title="Red Senzu"
+              info="100 Red Senzu"
+              svg={<RedSenzu />}
+            />
+            <ShopOfferElement
+              title="Band Of Loss"
+              info="With this item you wont lose eq when you die"
+              svg={<Bol />}
+            />
+            <ShopOfferElement
+              title="Frag Remover"
+              info="This item will remove all your frags and skulls."
+              svg={<FR />}
+            />
+            <ShopOfferElement
+              title="Dragon Ball Bag"
+              info="Bag with 36 slots"
+              svg={<DBBag />}
+            />
+          </>
+        );
+      case "premium":
+        return (
+          <>
+            <ShopOfferElement
+              title="
+10 Days Of Premium"
+              info="You will receive 10 days of premium in your account"
+              svg={<Prem10 />}
+            />
+            <ShopOfferElement
+              title="
+30 Days Of Premium"
+              info="You will receive 30 days of premium in your account"
+              svg={<Prem30 />}
+            />
+          </>
+        );
+      case "outfits":
+        return (
+          <>
+            <ShopOfferElement
+              title="First Special Outfit Scroll"
+              info="You will receive first special outfit to your character"
+              svg={<FirstOut />}
+            />
+            <ShopOfferElement
+              title="
+Second Special Outfit Scroll"
+              info="You will receive first special outfit to your character"
+              svg={<SecOut />}
+            />
+          </>
+        );
+      case "special":
+        return (
+          <>
+            <ShopOfferElement
+              title="
+10 Days Premium Card"
+              info="You will receive card with 10 premium days (tradable)"
+              svg={<Prem10 />}
+            />
+            <ShopOfferElement
+              title="
+30 Days Premium Card"
+              info="You will receive card with 30 premium days (tradable)"
+              svg={<Prem30 />}
+            />
+            <ShopOfferElement
+              title="
+1000 Premium Points Scroll"
+              info="You will receive scroll with 1000 premium points (tradable)"
+              svg={<PP1K />}
+            />
+            <ShopOfferElement
+              title="
+3000 Premium Points Scroll"
+              info="You will receive scroll with 3000 premium points  (tradable)"
+              svg={<PP3K />}
+            />
+            <ShopOfferElement
+              title="Boost Exp"
+              info="
+20% higher exp rate for 2 hours."
+              svg={<BoostExp />}
+            />
+            <ShopOfferElement
+              title="Boost HP"
+              info="
+25% more health for 2 hours."
+              svg={<BoostHP />}
+            />
+            <ShopOfferElement
+              title="Boost Ki"
+              info="25% more ki for 2 hours."
+              svg={<BoostMP />}
+            />
+            <ShopOfferElement
+              title="Boost Drop"
+              info="
+2x higher loot drop for 2 hours"
+              svg={<DropBoost />}
+            />
+          </>
+        );
+    }
+  };
 
   return (
     <MainMenu>
       <SubTitle title="Shop Offer" />
       <Table>
         <Tr>
-          <Td onClick={()=> {setWhichTable('items')}}>ITEMS</Td>
-          <Td onClick={()=> {setWhichTable('premium')}}>PREMIUM</Td>
-          <Td onClick={()=> {setWhichTable('outfits')}}>OUTFITS</Td>
-          <Td onClick={()=> {setWhichTable('special')}}>SPECIAL</Td>
+          <Td
+            onClick={() => {
+              setWhichTable("items");
+            }}
+          >
+            ITEMS
+          </Td>
+          <Td
+            onClick={() => {
+              setWhichTable("premium");
+            }}
+          >
+            PREMIUM
+          </Td>
+          <Td
+            onClick={() => {
+              setWhichTable("outfits");
+            }}
+          >
+            OUTFITS
+          </Td>
+          <Td
+            onClick={() => {
+              setWhichTable("special");
+            }}
+          >
+            SPECIAL
+          </Td>
         </Tr>
       </Table>
-      <TableStyleForOffers>
-      {whichTableVisible(whichTable)}
-      </TableStyleForOffers>
+      <TableStyleForOffers>{whichTableVisible(whichTable)}</TableStyleForOffers>
     </MainMenu>
   );
 };

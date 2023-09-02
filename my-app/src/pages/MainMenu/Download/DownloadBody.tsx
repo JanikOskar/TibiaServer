@@ -1,7 +1,4 @@
-import {
-  AndroidOutlined,
-  WindowsOutlined,
-} from "@ant-design/icons";
+import { AndroidOutlined, WindowsOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import styled from "styled-components";
 import { SubTitle } from "../../../components/SubTitle";
@@ -30,13 +27,13 @@ const ButtonStyled = styled(Button)`
   text-decoration: none;
   &&:focus {
     border-color: #dfcd00;
-    border-width:4px;
+    border-width: 4px;
     color: #1e2128;
     background-color: #dfcd00;
   }
   &&:hover {
     border-color: #dfcd00;
-    border-width:4px;
+    border-width: 4px;
     color: #1e2128;
     background-color: #dfcd00;
   }

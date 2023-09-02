@@ -8,8 +8,8 @@ import { styled } from "styled-components";
 const RegisterBodyStyle = styled.section`
   display: flex;
   flex-direction: column;
-  width:100%;
-  background-color: #3D3942;
+  width: 100%;
+  background-color: #3d3942;
 `;
 
 const FormStyle = styled(Form)`
@@ -29,11 +29,11 @@ const InputStyle = styled(Input)`
   border-width: 4px;
   &:focus {
     border-color: #dfcd00;
-    border-width:4px;
+    border-width: 4px;
   }
   &:hover {
     border-color: #dfcd00;
-    border-width:4px;
+    border-width: 4px;
   }
 `;
 
@@ -43,7 +43,7 @@ const InputPasswordStyle = styled(Input.Password)`
   border-width: 4px;
   &&:focus {
     border-color: #dfcd00;
-    border-width:4px;
+    border-width: 4px;
   }
   &&:hover {
     border-color: #dfcd00;
@@ -52,26 +52,26 @@ const InputPasswordStyle = styled(Input.Password)`
 `;
 
 const ErrorStyle = styled.div`
-  color: #DB162F;
+  color: #db162f;
 `;
 
 const CheckboxStyle = styled(Checkbox)`
-&&& {
-  color: #BEA6D8;
-  .ant-checkbox-checked .ant-checkbox-inner {
-    background-color: #dfcd00;
+  &&& {
+    color: #bea6d8;
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: #dfcd00;
+    }
+    .ant-checkbox-inner {
+      width: 20px;
+      height: 20px;
+      box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.02),
+        0px 1px 3px rgba(50, 50, 93, 0.15);
+      border-radius: 4px;
+    }
   }
-  .ant-checkbox-inner {
-    width: 20px;
-    height: 20px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.02), 0px 1px 3px rgba(50, 50, 93, 0.15);
-    border-radius: 4px;
-  }
-}
 `;
 
 export const RegisterBody = () => {
-
   const validationSchema = object({
     login: string()
       .min(2, "Too Short!")
@@ -218,8 +218,15 @@ export const RegisterBody = () => {
                       setTermsAccepted(e.target.checked);
                     }}
                   >
-                    I have read the <a href="/rules" style={{color: '#dfcd00'}} >Terms of Service</a> and{" "}
-                    <a href="/rules" style={{color: '#dfcd00'}}>Privacy Policy</a> and I do accept them
+                    I have read the{" "}
+                    <a href="/rules" style={{ color: "#dfcd00" }}>
+                      Terms of Service
+                    </a>{" "}
+                    and{" "}
+                    <a href="/rules" style={{ color: "#dfcd00" }}>
+                      Privacy Policy
+                    </a>{" "}
+                    and I do accept them
                   </CheckboxStyle>
                 )}
               </FieldStyle>
@@ -227,10 +234,23 @@ export const RegisterBody = () => {
                 <ErrorStyle>{errors.termsAccepted}</ErrorStyle>
               ) : null}
             </Space>
-            <div style={{width: `80%`,display: 'flex', justifyContent: 'flex-end'}}>
-            <button style={{ padding: `10px`, backgroundColor: '#1B191D', color: '#dfcd00',marginBottom: '8px'}}>
-              Wyślij
-            </button>
+            <div
+              style={{
+                width: `80%`,
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
+              <button
+                style={{
+                  padding: `10px`,
+                  backgroundColor: "#1B191D",
+                  color: "#dfcd00",
+                  marginBottom: "8px",
+                }}
+              >
+                Wyślij
+              </button>
             </div>
           </FormStyle>
         )}

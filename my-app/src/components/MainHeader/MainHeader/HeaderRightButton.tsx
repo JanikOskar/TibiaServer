@@ -7,8 +7,8 @@ const MainLists = styled.ul`
 
 const Link = styled.a`
   margin-right: 20px;
-  text-decoration:none ;
-  color: #BEA6D8;
+  text-decoration: none;
+  color: #bea6d8;
 `;
 
 export const HeaderRightButton = () => (

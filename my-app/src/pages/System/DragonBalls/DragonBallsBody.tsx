@@ -15,22 +15,29 @@ const MainMenu = styled.div`
 const InfoAboutDB = styled.h2`
   margin: 12px;
   color: #dfcd00;
-  text-align:center;
+  text-align: center;
 `;
 
 export const DragonBallsBody = () => {
-
   return (
     <MainMenu>
       <SubTitle title="Dragon Balls" />
-   <InfoAboutDB>Aproximitly 3 times a day dragon ball will apear on Earth:</InfoAboutDB>
-   <DB1 />
-   <InfoAboutDB>When it happens you are gonna need a dragon ball radar to localize the dragon ball position</InfoAboutDB>
-   <DB3 />
-   <InfoAboutDB>Once you find the dragon ball and use it.</InfoAboutDB>
-   <DB4 />
-   <InfoAboutDB>After gathering all 7 diffrent dragon balls you can summon Shenron and he can grant one of your wishes.</InfoAboutDB>
-   <DB5 style={{marginBottom: '12px'}}/>
+      <InfoAboutDB>
+        Aproximitly 3 times a day dragon ball will apear on Earth:
+      </InfoAboutDB>
+      <DB1 />
+      <InfoAboutDB>
+        When it happens you are gonna need a dragon ball radar to localize the
+        dragon ball position
+      </InfoAboutDB>
+      <DB3 />
+      <InfoAboutDB>Once you find the dragon ball and use it.</InfoAboutDB>
+      <DB4 />
+      <InfoAboutDB>
+        After gathering all 7 diffrent dragon balls you can summon Shenron and
+        he can grant one of your wishes.
+      </InfoAboutDB>
+      <DB5 style={{ marginBottom: "12px" }} />
     </MainMenu>
   );
 };

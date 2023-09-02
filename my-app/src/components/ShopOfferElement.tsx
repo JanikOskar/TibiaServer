@@ -13,8 +13,8 @@ const TdStyleForOffers = styled.td`
   margin-bottom: 4px;
   display: flex;
   align-items: center;
-  background-color: #3D3942;
-  border-color: #BEA6D8;
+  background-color: #3d3942;
+  border-color: #bea6d8;
 `;
 
 const TrStyleForOffers = styled.tr`
@@ -35,12 +35,12 @@ const TextStyle = styled.div`
   flex-direction: column;
   width: 80%;
   padding-right: 4px;
-  color: #BEA6D8;
+  color: #bea6d8;
 `;
 
 const LinkStyle = styled.a`
   color: #dfcd00;
-  text-decoration:none;
+  text-decoration: none;
 `;
 
 export const ShopOfferElement: FC<Props> = ({ title, svg, info }) => {
@@ -50,10 +50,10 @@ export const ShopOfferElement: FC<Props> = ({ title, svg, info }) => {
         {svg}
         <ItemsOffer>
           <TextStyle>
-            <div style={{color: 'gold'}}>{title}</div>
+            <div style={{ color: "gold" }}>{title}</div>
             <div>{info}</div>
           </TextStyle>
-          <div style={{ textAlign: "center", color: '#dfcd00' }}>
+          <div style={{ textAlign: "center", color: "#dfcd00" }}>
             <LinkStyle href="/login">Login to buy</LinkStyle>
           </div>
         </ItemsOffer>

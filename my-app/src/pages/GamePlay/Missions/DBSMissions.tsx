@@ -15,9 +15,9 @@ const MainMenu = styled.div`
 const TableStyle = styled(Table)`
   margin-bottom: 12px;
   width: 100%;
-  text-align:center;
+  text-align: center;
   &&& td.ant-table-cell {
-    text-align:center;
+    text-align: center;
   }
   &&& th.ant-table-cell {
     position: sticky;

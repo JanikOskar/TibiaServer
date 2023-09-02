@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
 type LeftMenuLiProps = {
   children: React.ReactNode;
@@ -13,8 +13,8 @@ const MenuLi = styled.li`
 `;
 
 const Link = styled.a`
-  text-decoration:none ;
-  color: #BEA6D8;
+  text-decoration: none;
+  color: #bea6d8;
 `;
 
 export const LeftMenuLi: FC<LeftMenuLiProps> = ({ title, page }) => (

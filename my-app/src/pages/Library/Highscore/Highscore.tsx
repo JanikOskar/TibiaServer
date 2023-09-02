@@ -5,18 +5,18 @@ import { HighscoreBody } from "./HighscoreBody";
 import { RightMenu } from "../../../components/MainMenu/RightMenu/RightMenu";
 
 const Main = styled.div`
-display:flex;
-flex:1;
-justify-content:center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
 `;
 
-
-export const Highscore = () => 
-<>
-<MainHeader />
-<Main>
-  <LeftMenu />
-  <HighscoreBody />
-  <RightMenu />
-</Main>
-</>
+export const Highscore = () => (
+  <>
+    <MainHeader />
+    <Main>
+      <LeftMenu />
+      <HighscoreBody />
+      <RightMenu />
+    </Main>
+  </>
+);

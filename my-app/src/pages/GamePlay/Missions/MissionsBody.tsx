@@ -39,45 +39,107 @@ const MissionsBodyStyle = styled.div`
 export const MissionsBody = () => {
   const { missionName } = useParams();
 
-    const [isHoveredDaily, setIsHoveredDaily] = useState(false);
-    const [isHoveredDB, setIsHoveredDB] = useState(false);
-    const [isHoveredDBGT, setIsHoveredDBGT] = useState(false);
-    const [isHoveredDBS, setIsHoveredDBS] = useState(false);
-    const [isHoveredFarmer, setIsHoveredFarmer] = useState(false);
-    const [isHoveredDBZ, setIsHoveredDBZ] = useState(false);
-    
-    const WitchMissions = () => {
-      switch (missionName){
-        case 'farmer':
-          return (<FarmerMissions />)
-      case 'daily':
-        return (<DailyMissions />)
-        case 'db':
-        return (<DbMissions />)
-        case 'dbz':
-        return (<DBZMissions />)
-        case 'dbgt':
-        return (<DBGTMissions />)
-        case 'dbs':
-        return (<DBSMissions />)
-        default:
-          return (
-            <MissionsBodyStyle style={{marginTop: `12px`, marginBottom: `12px`}}>
-          <a onMouseEnter={()=>{setIsHoveredFarmer(true)}} onMouseLeave={()=>{setIsHoveredFarmer(false)}} href="/missions/farmer">{isHoveredFarmer ? <Farmer2 /> : <Farmer1 />}</a>
-          <a onMouseEnter={()=>{setIsHoveredDaily(true)}} onMouseLeave={()=>{setIsHoveredDaily(false)}} href="/missions/daily" >{isHoveredDaily ? <Daily2/> : <Daily1 />}</a>
-          <a onMouseEnter={()=>{setIsHoveredDB(true)}} onMouseLeave={()=>{setIsHoveredDB(false)}} href="/missions/db">{isHoveredDB ? <DB2 /> : <DB1 />}</a>
-          <a onMouseEnter={()=>{setIsHoveredDBZ(true)}} onMouseLeave={()=>{setIsHoveredDBZ(false)}} href="/missions/dbz">{isHoveredDBZ ? <DBZ2 /> : <DBZ1 />}</a>
-          <a onMouseEnter={()=>{setIsHoveredDBGT(true)}} onMouseLeave={()=>{setIsHoveredDBGT(false)}} href="/missions/dbgt">{isHoveredDBGT ? <DBGT2 /> : <DBGT1 />}</a>
-          <a onMouseEnter={()=>{setIsHoveredDBS(true)}} onMouseLeave={()=>{setIsHoveredDBS(false)}} href="/missions/dbs">{isHoveredDBS ? <DBS2 /> : <DBS1 />}</a>
+  const [isHoveredDaily, setIsHoveredDaily] = useState(false);
+  const [isHoveredDB, setIsHoveredDB] = useState(false);
+  const [isHoveredDBGT, setIsHoveredDBGT] = useState(false);
+  const [isHoveredDBS, setIsHoveredDBS] = useState(false);
+  const [isHoveredFarmer, setIsHoveredFarmer] = useState(false);
+  const [isHoveredDBZ, setIsHoveredDBZ] = useState(false);
+
+  const WitchMissions = () => {
+    switch (missionName) {
+      case "farmer":
+        return <FarmerMissions />;
+      case "daily":
+        return <DailyMissions />;
+      case "db":
+        return <DbMissions />;
+      case "dbz":
+        return <DBZMissions />;
+      case "dbgt":
+        return <DBGTMissions />;
+      case "dbs":
+        return <DBSMissions />;
+      default:
+        return (
+          <MissionsBodyStyle
+            style={{ marginTop: `12px`, marginBottom: `12px` }}
+          >
+            <a
+              onMouseEnter={() => {
+                setIsHoveredFarmer(true);
+              }}
+              onMouseLeave={() => {
+                setIsHoveredFarmer(false);
+              }}
+              href="/missions/farmer"
+            >
+              {isHoveredFarmer ? <Farmer2 /> : <Farmer1 />}
+            </a>
+            <a
+              onMouseEnter={() => {
+                setIsHoveredDaily(true);
+              }}
+              onMouseLeave={() => {
+                setIsHoveredDaily(false);
+              }}
+              href="/missions/daily"
+            >
+              {isHoveredDaily ? <Daily2 /> : <Daily1 />}
+            </a>
+            <a
+              onMouseEnter={() => {
+                setIsHoveredDB(true);
+              }}
+              onMouseLeave={() => {
+                setIsHoveredDB(false);
+              }}
+              href="/missions/db"
+            >
+              {isHoveredDB ? <DB2 /> : <DB1 />}
+            </a>
+            <a
+              onMouseEnter={() => {
+                setIsHoveredDBZ(true);
+              }}
+              onMouseLeave={() => {
+                setIsHoveredDBZ(false);
+              }}
+              href="/missions/dbz"
+            >
+              {isHoveredDBZ ? <DBZ2 /> : <DBZ1 />}
+            </a>
+            <a
+              onMouseEnter={() => {
+                setIsHoveredDBGT(true);
+              }}
+              onMouseLeave={() => {
+                setIsHoveredDBGT(false);
+              }}
+              href="/missions/dbgt"
+            >
+              {isHoveredDBGT ? <DBGT2 /> : <DBGT1 />}
+            </a>
+            <a
+              onMouseEnter={() => {
+                setIsHoveredDBS(true);
+              }}
+              onMouseLeave={() => {
+                setIsHoveredDBS(false);
+              }}
+              href="/missions/dbs"
+            >
+              {isHoveredDBS ? <DBS2 /> : <DBS1 />}
+            </a>
           </MissionsBodyStyle>
-          )
-        }
-  }
-    
+        );
+    }
+  };
+
   return (
     <MainMenu>
       <SubTitle title="Missions" />
-    {WitchMissions()}
+      {WitchMissions()}
     </MainMenu>
   );
 };

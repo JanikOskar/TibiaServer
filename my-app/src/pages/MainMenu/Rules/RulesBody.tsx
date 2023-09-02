@@ -19,7 +19,7 @@ export const RulesBody = () => {
   return (
     <RulesBodyStyle>
       <SubTitle title="Server Rules" />
-      <div style={{padding: '8px 0px 8px 8px'}}>
+      <div style={{ padding: "8px 0px 8px 8px" }}>
         <ContentStyle>
           <TitleStyle>ACCOUNTS</TitleStyle>
           <br />

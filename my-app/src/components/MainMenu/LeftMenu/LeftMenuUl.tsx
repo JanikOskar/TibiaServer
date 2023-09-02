@@ -12,12 +12,12 @@ const LeftUl = styled.ul`
   text-align: center;
   margin: 0;
   padding: 12px;
-  background-color: #212B31;
+  background-color: #212b31;
 `;
 
 const Title = styled.h1`
   width: 150px;
-  background-color: #212B31;
+  background-color: #212b31;
 `;
 
 export const LeftMenuUl: FC<LeftMenuUlProps> = ({

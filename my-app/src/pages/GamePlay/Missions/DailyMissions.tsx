@@ -12,27 +12,34 @@ const MainMenu = styled.div`
 `;
 
 const TableStyle = styled(Table)`
-margin-bottom: 12px;
-width: 100%;
-&&& td.ant-table-cell {
-  text-align:center;
-}
-&&& th.ant-table-cell {
-  position:sticky;
-  color: #dfcd00;
-  background-color: #786c85;
-  border: 1px solid #bea6d8;
- }
- &&& th.ant-table-cell::before {
-  display:none;
-}
- &&:where(.css-dev-only-do-not-override-k7429z).ant-table-wrapper .ant-table-tbody >tr >th, :where(.css-dev-only-do-not-override-k7429z).ant-table-wrapper .ant-table-tbody >tr >td{
-  border: 1px solid #bea6d8;
- }
- &&& td.ant-table-cell.ant-table-cell-row-hover {
-  color: #dfcd00;
-  background-color: #786c85;
-}
+  margin-bottom: 12px;
+  width: 100%;
+  &&& td.ant-table-cell {
+    text-align: center;
+  }
+  &&& th.ant-table-cell {
+    position: sticky;
+    color: #dfcd00;
+    background-color: #786c85;
+    border: 1px solid #bea6d8;
+  }
+  &&& th.ant-table-cell::before {
+    display: none;
+  }
+  &&:where(.css-dev-only-do-not-override-k7429z).ant-table-wrapper
+    .ant-table-tbody
+    > tr
+    > th,
+  :where(.css-dev-only-do-not-override-k7429z).ant-table-wrapper
+    .ant-table-tbody
+    > tr
+    > td {
+    border: 1px solid #bea6d8;
+  }
+  &&& td.ant-table-cell.ant-table-cell-row-hover {
+    color: #dfcd00;
+    background-color: #786c85;
+  }
 `;
 
 export const DailyMissions = () => {
@@ -218,7 +225,7 @@ export const DailyMissions = () => {
         pagination={false}
         onRow={() => ({
           style: {
-            border: '1px solid #bea6d8',
+            border: "1px solid #bea6d8",
             background: "#3d3942",
             color: "#bea6d8",
           },
