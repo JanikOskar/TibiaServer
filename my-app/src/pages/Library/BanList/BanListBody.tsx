@@ -17,34 +17,55 @@ const Table = styled.table`
   border-spacing: 0px;
   margin: 0 auto;
   text-align: center;
+  border-color: #bea6d8;
+  margin: 12px;
 `;
 
 const Tr = styled.tr`
-  border-bottom: 1px solid black;
+  background-color: #3d3942;
+  color: #bea6d8;
+  border-color: #bea6d8;
   padding: 4px;
 `;
 
 const Td = styled.td`
   border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 4px;
+  border-color: #bea6d8;
+`;
+
+const Thead = styled.thead`
+  border: 1px solid black;
+  padding: 4px;
+  border-color: #bea6d8;
+`;
+
+const NameColumn = styled.td`
+  border: 1px solid #bea6d8;
+  color: #dfcd00;
+  background-color: #786c85;
   padding: 4px;
 `;
 
-const Thead = styled.thead``;
-
-const NameColumn = styled.td``;
-
 const ExpiresColumn = styled.td`
-  border-left: 1px solid black;
+  border: 1px solid #bea6d8;
+  color: #dfcd00;
+  background-color: #786c85;
   padding: 4px;
 `;
 
 const CommentColumn = styled.td`
-  border-left: 1px solid black;
+  border: 1px solid #bea6d8;
+  color: #dfcd00;
+  background-color: #786c85;
   padding: 4px;
 `;
 
 const AddedByColumn = styled.td`
-  border-left: 1px solid black;
+  border: 1px solid #bea6d8;
+  color: #dfcd00;
+  background-color: #786c85;
   padding: 4px;
 `;
 

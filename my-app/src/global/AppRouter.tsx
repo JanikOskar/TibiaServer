@@ -41,7 +41,6 @@ export const AppRouter: FunctionComponent = () => {
           <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
-      </>
-
+    </>
   );
 };

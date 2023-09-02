@@ -12,7 +12,7 @@ const MainBody = styled.div`
 const Table = styled.table`
   border-collapse: collapse;
   border-spacing: 0px;
-  width: 90%;
+  width: 80%;
   border: 1px solid black;
   padding: 4px;
   margin: 8px;

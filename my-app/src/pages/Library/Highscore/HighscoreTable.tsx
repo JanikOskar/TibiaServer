@@ -4,51 +4,73 @@ import { useParams } from "react-router";
 
 const Table = styled.table`
   border-collapse: collapse;
-  width:80%;
   border-spacing: 0px;
+  width: 80%;
   border: 1px solid black;
+  padding: 4px;
+  margin: 8px;
+  border-color: #bea6d8;
 `;
 
 const Tr = styled.tr`
+  background-color: #3d3942;
+  color: #bea6d8;
+  border-color: #bea6d8;
   padding: 4px;
 `;
 
 const Td = styled.td`
-border-left: 1px solid black;
-border-bottom: 1px solid black;
-padding: 4px;
+  border-left: 1px solid #bea6d8;
+  border-bottom: 1px solid #bea6d8;
+  padding: 4px;
+  border-color: #bea6d8;
 `;
 
 const Thead = styled.thead`
-  border: 1px solid black;
+  border: 1px solid #bea6d8;
   padding: 4px;
 `;
 
 const RankColumn = styled.td`
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #bea6d8;
+  color: #dfcd00;
+  padding: 8px 0;
+  background-color: #786c85;
 `;
 
 const NameColumn = styled.td`
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  padding: 4px;
+  border-left: 1px solid #bea6d8;
+  border-bottom: 1px solid #bea6d8;
+  padding: 8px 0;
+  text-align: center;
+  color: #dfcd00;
+  background-color: #786c85;
 `;
 
 const ProfessionColumn = styled.td`
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  padding: 4px;
+  border-left: 1px solid #bea6d8;
+  border-bottom: 1px solid #bea6d8;
+  padding: 8px 0;
+  text-align: center;
+  color: #dfcd00;
+  background-color: #786c85;
 `;
 
 const LevelColumn = styled.td`
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  padding: 4px;
-  width:10%;
+  border-left: 1px solid #bea6d8;
+  border-bottom: 1px solid #bea6d8;
+  padding: 8px 0;
+  text-align: center;
+  color: #dfcd00;
+  background-color: #786c85;
 `;
 
 const NameOfRow = styled.span`
   margin: 0px 4px;
+`;
+
+const RankingNameStyle = styled.h2`
+  color: #dfcd00;
 `;
 
 const characters = [
@@ -127,23 +149,23 @@ export const HighscoreTableLevel: FC = () => {
   const changeHighscoreName = (name: any) => {
     switch (name) {
       case "kiLevel":
-        return <h2>Ranking for Ki Level</h2>;
+        return <RankingNameStyle>Ranking for Ki Level</RankingNameStyle>;
       case "speed":
-        return <h2>Ranking for Speed</h2>;
+        return <RankingNameStyle>Ranking for Speed</RankingNameStyle>;
       case "atkSpeed":
-        return <h2>Ranking for Attack Speed</h2>;
+        return <RankingNameStyle>Ranking for Attack Speed</RankingNameStyle>;
       case "critical":
-        return <h2>Ranking for Critical</h2>;
+        return <RankingNameStyle>Ranking for Critical</RankingNameStyle>;
       case "strength":
-        return <h2>Ranking for Strength</h2>;
+        return <RankingNameStyle>Ranking for Strength</RankingNameStyle>;
       case "kiBlast":
-        return <h2>Ranking for Ki Blast</h2>;
+        return <RankingNameStyle>Ranking for Ki Blast</RankingNameStyle>;
       case "defense":
-        return <h2>Ranking for Defense</h2>;
+        return <RankingNameStyle>Ranking for Defense</RankingNameStyle>;
       case "energy":
-        return <h2>Ranking for Energy</h2>;
+        return <RankingNameStyle>Ranking for Energy</RankingNameStyle>;
       default:
-        return <h2>Ranking for Level</h2>;
+        return <RankingNameStyle>Ranking for Level</RankingNameStyle>;
     }
   };
 
@@ -175,29 +197,29 @@ export const HighscoreTableLevel: FC = () => {
             </LevelColumn>
           </Tr>
         </Thead>
-          {users.map((element, index) => (
-            <Tr key={index}>
-              <Td>
-                <NameOfRow></NameOfRow>
-                <span>{index}</span>
-              </Td>
-              <Td>
-                <NameOfRow>
-                  <span>{element.name}</span>
-                </NameOfRow>
-              </Td>
-              <Td>
-                <NameOfRow>
-                  <center>{element.profession}</center>
-                </NameOfRow>
-              </Td>
-              <Td>
-                <NameOfRow>
-                  <center>{element.level}</center>
-                </NameOfRow>
-              </Td>
-            </Tr>
-          ))}
+        {users.map((element, index) => (
+          <Tr key={index}>
+            <Td>
+              <NameOfRow></NameOfRow>
+              <span>{index}</span>
+            </Td>
+            <Td>
+              <NameOfRow>
+                <span>{element.name}</span>
+              </NameOfRow>
+            </Td>
+            <Td>
+              <NameOfRow>
+                <center>{element.profession}</center>
+              </NameOfRow>
+            </Td>
+            <Td>
+              <NameOfRow>
+                <center>{element.level}</center>
+              </NameOfRow>
+            </Td>
+          </Tr>
+        ))}
       </Table>
     </>
   );
