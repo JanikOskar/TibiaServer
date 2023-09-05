@@ -13,7 +13,7 @@ const MainMenu = styled.div`
 
 const TableStyle = styled(Table)`
   margin-bottom: 12px;
-  width: 100%;
+  width: 80%;
   &&& td.ant-table-cell {
     text-align: center;
   }

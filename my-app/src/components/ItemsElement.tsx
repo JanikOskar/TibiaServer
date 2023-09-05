@@ -20,7 +20,7 @@ const TdStyleForOffers = styled.td`
 `;
 
 const TrStyleForOffers = styled.tr`
-  width: 100%;
+  width: 80%;
 `;
 
 export const ItemsElement: FC<Props> = ({

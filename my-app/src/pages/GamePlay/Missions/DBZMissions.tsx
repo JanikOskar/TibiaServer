@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { SubTitle } from "../../../components/SubTitle";
 import { Table } from "antd";
 import { ReactComponent as DBZ } from "assets/missions/DBZ1.svg";
 
@@ -14,7 +13,7 @@ const MainMenu = styled.div`
 
 const TableStyle = styled(Table)`
   margin-bottom: 12px;
-  width: 100%;
+  width: 80%;
   &&& td.ant-table-cell {
     text-align: center;
   }

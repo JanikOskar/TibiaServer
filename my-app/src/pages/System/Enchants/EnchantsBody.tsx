@@ -24,7 +24,7 @@ const EnchantDescription = styled.span`
 
 const TableStyle = styled(Table)`
   margin-bottom: 12px;
-  width: 100%;
+  width: 80%;
   &&& td.ant-table-cell {
     text-align: center;
   }
