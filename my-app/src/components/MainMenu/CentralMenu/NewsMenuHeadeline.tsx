@@ -64,7 +64,9 @@ export const NewsMenuHeadline: FC<Props> = ({ date, title, text }) => (
     <NewsTable>
       <TbodyStyle>
         <TrStyle>
+          <td>
           <InfoAboutChanges>{text}</InfoAboutChanges>
+          </td>
         </TrStyle>
       </TbodyStyle>
     </NewsTable>
